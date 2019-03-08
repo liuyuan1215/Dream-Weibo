@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#div{
+    position: relative;
+}
+/*背景图*/
+#banner{
+    position: relative;
+    height: 730px;
+    background: #c9cbe4;
+}
+#banner #wai img{
+    height: 730px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/*顶部导航*/
+#top{
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    border: 1px solid #ccc;
+    position: absolute;
+    top: 0;
+}
+#top #top1{
+    width: 90px;
+    margin-left: 100px;
+    margin-top:8px;
+}
+#top form{
+    width: 450px;
+    height: 30px;
+    position: absolute;
+    left: 200px;
+    top: 10px;
+}
+#top #search{
+    width: 450px;
+    height: 30px;
+    background: #eee;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 14px;
+    text-indent: 5px;
+    line-height: 30px;
+}
+#suosuo{
+    position: absolute;
+    top: 9px;
+    left: 430px;
+}
+#list{
+    list-style: none;
+    position: absolute;
+    top: 14px;
+    right: 150px;
+}
+#list .top{
+    text-align: center;
+    width: 80px;
+    float: left;
+    color: #767272;
+    font-size: 16px;
+    cursor:pointer;
+}
+#list i{
+    font-size: 17px;
+    margin-right: 2px;
+}
+#list .top1{
+    text-align: center;
+    width: 40px;
+    float: left;
+    color: #767272;
+    font-size: 16px;
+    cursor:pointer;
+}
+#list .top2{
+    text-align: center;
+    width: 40px;
+    float: left;
+    color: #f88208;
+    font-size: 16px;
+    cursor:pointer;
+}
+#list .bian:hover{
+    color: #f88208;
+}
+#user{
+    border-right: 1px solid #bbb;
+}
