@@ -27,6 +27,7 @@
     border: 1px solid #ccc;
     position: absolute;
     top: 0;
+    z-index: 10;
 }
 #top #top1{
     width: 90px;
@@ -50,10 +51,14 @@
     text-indent: 5px;
     line-height: 30px;
 }
-#suosuo{
+#sousuo{
     position: absolute;
     top: 9px;
     left: 430px;
+    cursor:pointer;
+}
+#sousuo:hover{
+    color: #f88208;
 }
 #list{
     list-style: none;
@@ -63,35 +68,158 @@
 }
 #list .top{
     text-align: center;
-    width: 80px;
     float: left;
-    color: #767272;
     font-size: 16px;
+    display: block;
+}
+
+#list .top1{
+    width: 80px;
+    color: #767272;
     cursor:pointer;
 }
 #list i{
     font-size: 17px;
     margin-right: 2px;
 }
-#list .top1{
-    text-align: center;
-    width: 40px;
-    float: left;
-    color: #767272;
-    font-size: 16px;
-    cursor:pointer;
-}
 #list .top2{
-    text-align: center;
     width: 40px;
-    float: left;
+    color: #767272;
+    position: relative;
+}
+#list .top3{
+    width: 40px;
     color: #f88208;
-    font-size: 16px;
-    cursor:pointer;
 }
 #list .bian:hover{
     color: #f88208;
 }
 #user{
     border-right: 1px solid #bbb;
+}
+
+/*设置二级菜单*/
+#two{
+    box-shadow: 0 0 5px #aaa;
+    position: absolute;
+    top: 30px;
+    left: -20px;
+    display: none;
+    border-radius:2px;
+}
+#two .second{
+    background: #fff;
+    font-size: 12px;
+    color: #767272;
+    width: 80px;
+    height: 30px;
+    list-style: none;
+    text-align: center;
+    line-height: 30px;
+}
+.triangle::after{
+    content: '';
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -11px;
+}
+#two .xia{
+    border-bottom: 1px solid #ccc;
+}
+#two .second:hover{
+    background: #eee;
+    color: #f88208;
+}
+.top:hover #two{
+    display: block;
+}
+
+/*中间部分*/
+#middle{
+    width: 70%;
+    position: absolute;
+    left: 50%;
+    top: 52px;
+    transform: translate(-50%);
+}
+#photo{
+    height: 400px;
+    background: url(../imgs/6.png) no-repeat 0 0;
+    background-size: cover;
+}
+/*头像*/
+#photo #picture{
+    width: 100px;
+    height: 100px;
+    background: #ff0000;
+    background: url(../imgs/7.jpg) no-repeat 0 0;
+    background-size: cover;
+    border: 2px solid;
+    border-color: rgba(255,255,255,.5);
+    border-radius: 100px;
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    transform:translate(-50%);
+}
+#photo h2{
+    color: #ffffff;
+    display: inline;
+}
+#photo span{
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+}
+#photo #text{
+    position: absolute;
+    left: 50%;
+    top: 52%;
+    transform: translate(-50%);
+}
+#photo p{
+    color: #ffffff;
+    font-size: 13px;
+    position: absolute;
+    left: 50%;
+    top: 61%;
+    transform: translate(-50%);
+}
+
+/*头像下的按钮*/
+#btn{
+    width: 35%;
+    height: 40px;
+    background: transparent;
+}
+#btn #a1{
+     width: 30%;
+     height: 40px;
+     background: #bbb;
+     margin-right: 5px;
+     display: inline-block;
+ }
+#btn #a2{
+    width: 10%;
+    height: 40px;
+    background: #bbb;
+    display: inline-block;
+    margin-right: 8px;
+}
+#btn #a3{
+    width: 30%;
+    height: 40px;
+    background: #bbb;
+    margin-right: 8px;
+    display: inline-block;
+}
+#btn #a4{
+    width: 12%;
+    height: 40px;
+    background: #bbb;
+    display: inline-block;
 }
