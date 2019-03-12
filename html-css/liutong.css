@@ -298,3 +298,42 @@ body{
     left: 50%;
     transform: translate(-50%);
 }
+
+/*轮播图*/
+#big-box{
+    width: 1000px;
+    position: relative;
+    margin: 500px auto;
+}
+#big-box #box{
+    width: 1000px;
+    height: 567px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+#big-box img{
+    position:absolute;
+    width: 1000px;
+    transition:opacity 2s ease;
+    opacity: 0;
+}
+#big-box .aa{
+    opacity: 1;
+}
+#big-box #btn1{
+    position: absolute;
+    bottom: 10px;
+    left:50%;
+    transform: translateX(-50%);
+}
+#big-box #btn1 div{
+    width: 60px;
+    height: 12px;
+    background:rgba(0,0,0,.4);
+    float:left;
+    margin-right: 5px;
+}
+#big-box #btn1 .small{
+    background: #ccc;
+}
