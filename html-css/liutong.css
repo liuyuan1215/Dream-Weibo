@@ -2,18 +2,25 @@
     margin: 0;
     padding: 0;
 }
+ul{
+    list-style: none;
+}
 #div{
     position: relative;
+}
+body{
+    background: #c9cbe4;
 }
 /*背景图*/
 #banner{
     position: relative;
-    height: 730px;
+    width: 100%;
+    height: 100%;
     background: #c9cbe4;
 }
 #banner #wai img{
     height: 730px;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -25,7 +32,7 @@
     height: 50px;
     background: #fff;
     border: 1px solid #ccc;
-    position: absolute;
+    position: fixed;
     top: 0;
     z-index: 10;
 }
@@ -140,22 +147,22 @@
 
 /*中间部分*/
 #middle{
-    width: 70%;
+    width:900px;
     position: absolute;
     left: 50%;
     top: 52px;
     transform: translate(-50%);
+    z-index: 2;
 }
 #photo{
-    height: 400px;
-    background: url(../imgs/6.png) no-repeat 0 0;
+    height: 350px;
+    background: url(../imgs/8.jpg) no-repeat 0 0;
     background-size: cover;
 }
 /*头像*/
 #photo #picture{
     width: 100px;
     height: 100px;
-    background: #ff0000;
     background: url(../imgs/7.jpg) no-repeat 0 0;
     background-size: cover;
     border: 2px solid;
@@ -178,7 +185,7 @@
 #photo #text{
     position: absolute;
     left: 50%;
-    top: 52%;
+    top: 60%;
     transform: translate(-50%);
 }
 #photo p{
@@ -186,40 +193,108 @@
     font-size: 13px;
     position: absolute;
     left: 50%;
-    top: 61%;
+    top: 71%;
     transform: translate(-50%);
 }
 
 /*头像下的按钮*/
 #btn{
     width: 35%;
-    height: 40px;
+    height: 35px;
     background: transparent;
+    position: absolute;
+    top: 80%;
+    left: 52%;
+    transform: translate(-50%);
+}
+#btn>div{
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: #ffffff;
+    border-radius: 2px;
+    background: #5f636d;
+    cursor: pointer;
+}
+#btn>div:hover{
+    background: #767272;
 }
 #btn #a1{
      width: 30%;
-     height: 40px;
-     background: #bbb;
      margin-right: 5px;
-     display: inline-block;
+    position: absolute;
+    top: 0;
  }
 #btn #a2{
     width: 10%;
-    height: 40px;
-    background: #bbb;
-    display: inline-block;
     margin-right: 8px;
+    position: absolute;
+    top: 0;
+    left: 33%;
+}
+#a2 .icon-arrDown{
+    font-size: 20px;
 }
 #btn #a3{
     width: 30%;
-    height: 40px;
-    background: #bbb;
     margin-right: 8px;
-    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 46%;
 }
 #btn #a4{
     width: 12%;
+    position: absolute;
+    top: 0;
+    left: 79%;
+}
+/*二级菜单*/
+#aa1,#aa2{
+    width: 115px;
+    height: 140px;
+    display: none;
+    z-index: 2;
+}
+#aa1 .bb,#aa2 .bb{
+    height: 35px;
+    background: #fff;
+    color:#767272;
+    padding-left: 6px;
+    text-align: left;
+}
+#aa1 .bb:hover,#aa2 .bb:hover{
+    background: #eee;
+    color:#f88208;
+}
+#btn #a1:hover #aa1{
+    display: block;
+}
+#btn #a4:hover #aa2{
+    display: block;
+}
+
+/*白条*/
+#across{
+    background: #ffffff;
     height: 40px;
-    background: #bbb;
+    width: 900px;
+    position: absolute;
+    left: 50%;
+    top: 402px;
+    transform: translate(-50%);
+}
+#across .span{
+    margin-right: 100px;
     display: inline-block;
+    height: 40px;
+    cursor: pointer;
+    line-height: 40px;
+}
+#across .span:last-child{
+    margin-right: 0;
+}
+#across #pad{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
 }
