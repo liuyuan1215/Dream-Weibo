@@ -27,25 +27,30 @@ body{
 }
 
 /*顶部导航*/
-#top{
+#topwai{
     width: 100%;
     height: 50px;
-    background: #fff;
+    background: #ffffff;
     border: 1px solid #ccc;
-    position: fixed;
+}
+#top{
+    width: 1230px;
+    height: 50px;
+    margin: 0 auto;
+    background: #fff;
+    position: relative;
     top: 0;
     z-index: 10;
 }
 #top #top1{
     width: 90px;
-    margin-left: 100px;
     margin-top:8px;
 }
 #top form{
     width: 450px;
     height: 30px;
     position: absolute;
-    left: 200px;
+    left: 100px;
     top: 10px;
 }
 #top #search{
@@ -71,7 +76,7 @@ body{
     list-style: none;
     position: absolute;
     top: 14px;
-    right: 150px;
+    right: 0px;
 }
 #list .top{
     text-align: center;
@@ -79,7 +84,6 @@ body{
     font-size: 16px;
     display: block;
 }
-
 #list .top1{
     width: 80px;
     color: #767272;
@@ -126,13 +130,18 @@ body{
 }
 .triangle::after{
     content: '';
-    border-width: 6px;
-    border-style: solid;
-    border-color: transparent transparent #fff transparent;
-    width: 0;
-    height: 0;
+    width: 12px;
+    height: 12px;
+    transform: rotate(45deg);
+    background: #fff;
     position: absolute;
-    top: -11px;
+    top: -6px;
+    border-left-color: #ccc;
+    border-left-width: 1px;
+    border-left-style:solid;
+    border-top-color: #ccc;
+    border-top-width: 1px;
+    border-top-style:solid;
 }
 #two .xia{
     border-bottom: 1px solid #ccc;
