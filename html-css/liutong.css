@@ -589,7 +589,16 @@ body{
     position: absolute;
     top: 460px;
 }
-
+/*右上*/
+#top-right{
+    width: 638px;
+    height: 40px;
+    background: #fff;
+    border-radius: 3px;
+    position: sticky;
+    margin: 10px 0 0 262px;
+    top: 60px;
+}
 
 /*他的相册*/
 #Photo-album{
@@ -643,14 +652,15 @@ body{
     border-bottom: 1px solid #ccc;
  }
 #wai-zhao1 img{
-    width: 200px;
+    width: 210px;
     position: absolute;
     top: 40px;
     left: 15px;
+    cursor: pointer;
 }
 #month #month2{
     width: 890px;
-    height: 200px;
+    height: 210px;
     color:#666;
     font-size: 13px;
     padding-left: 10px;
@@ -659,8 +669,67 @@ body{
     border-bottom: 1px solid #ccc;
 }
 #wai-zhao2 img{
-    width: 200px;
+    width: 210px;
     position: absolute;
     top: 250px;
     left: 15px;
+    cursor: pointer;
+}
+/*照片hover*/
+#rgb1,#rgb2{
+    width: 80px;
+    height: 35px;
+    background: rgba(0,0,0,.3);
+    color:#fff;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 35px;
+    display: none;
+    cursor: pointer;
+}
+#rgb1{
+    position: absolute;
+    top: 42px;
+    left: 142px;
+}
+#rgb1:hover{
+    color:#f88208;
+}
+#rgb2:hover{
+    color:#f88208;
+}
+#rgb2{
+    position: absolute;
+    top: 252px;
+    left: 142px;
+}
+#rgba1,#rgba2{
+    width: 210px;
+    height: 35px;
+    background: rgba(0,0,0,.3);
+    color:#fff;
+    line-height: 35px;
+    position: absolute;
+    left: 15px;
+    cursor: pointer;
+    display: none;
+}
+#rgba1{
+    top: 162px;
+}
+#rgba2{
+    top: 382px;
+}
+#r-one,#r-three{
+    position: absolute;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-right: 1px solid #fff;
+}
+#r-one:hover,#r-two:hover,#r-three:hover,#r-four:hover{
+    color:#f88208;
+}
+#r-two,#r-four{
+    position: absolute;
+    left: 100px;
 }

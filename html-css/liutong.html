@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="liutong.css">
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_1077826_azmgqvmcx1e.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1077826_srxqyd110li.css">
 </head>
 <body>
 <div id="div">
@@ -108,6 +108,9 @@
                         </div>
                     </div>
                     <div id="left-two"></div>
+                    <div id="top-right">
+
+                    </div>
                 </div>
                 <div class="xuan">
                     <div id="pa1">
@@ -122,11 +125,39 @@
                             <div id="month">
                                 <div id="month1">03月</div>
                                 <div id="wai-zhao1">
-                                    <img src="../imgs/zhaopian1.jpg" alt="">
+                                    <img class="img1" src="../imgs/zhaopian1.jpg" alt="">
+                                    <div title="赞" id="rgb1">
+                                        <i class="iconfont icon-zan"></i>
+                                        &nbsp;16797
+                                    </div>
+                                    <div id="rgba1">
+                                        <div id="r-one">
+                                            <i class="iconfont icon-zhuanfa"></i>
+                                            &nbsp;2013
+                                        </div>
+                                        <div id="r-two">
+                                            <i class="iconfont icon-pinglun"></i>
+                                            &nbsp;1490
+                                        </div>
+                                    </div>
                                 </div>
                                 <div id="month2">02月</div>
                                 <div id="wai-zhao2">
-                                    <img src="../imgs/zhaopian2.jpg" alt="">
+                                    <img class="img2" src="../imgs/zhaopian2.jpg" alt="">
+                                    <div title="赞" id="rgb2">
+                                        <i class="iconfont icon-zan"></i>
+                                        &nbsp;40588
+                                    </div>
+                                    <div id="rgba2">
+                                        <div id="r-three">
+                                            <i class="iconfont icon-zhuanfa"></i>
+                                            &nbsp;13672
+                                        </div>
+                                        <div id="r-four">
+                                            <i class="iconfont icon-pinglun"></i>
+                                            &nbsp;5351
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -192,6 +223,18 @@
     var oPhoto=document.getElementById('Photo-album');
     var aDiv2=oPhoto.getElementsByClassName('xuanzhong');
 
+
+    var oZhao1=document.getElementById('wai-zhao1');
+    var oImg1=oZhao1.getElementsByClassName('img1');
+    var oRgb1=document.getElementById('rgb1');
+    var oRgba1=document.getElementById('rgba1');
+
+    var oZhao2=document.getElementById('wai-zhao2');
+    var oImg2=oZhao2.getElementsByClassName('img2');
+    var oRgb2=document.getElementById('rgb2');
+    var oRgba2=document.getElementById('rgba2');
+
+
     for(var i=0;i<aSpan.length;i++){
         aSpan[i].index=i;
         aSpan[i].onclick=function(){
@@ -207,12 +250,12 @@
         }
     };
 
-    for(var j=0;i<aSpan2.length;j++){
-        aSpan2[j].index=j;
+    for(var j=0;j<aSpan2.length;j++){
+        aSpan2[j].index1=j;
         aSpan2[j].onclick=function(){
-            change(this.index);
+            change1(this.index1);
         };
-        function change(num){
+        function change1(num){
             for(var j=0; j<aSpan2.length;j++){
                 aSpan2[j].className = "pxpx";
                 aDiv2[j].className = "xuanzhong";
@@ -220,6 +263,26 @@
             aSpan2[num].className = "pxpx pic-xianshi";
             aDiv2[num].className = "xuanzhong zhong";
         }
+    };
+
+    oImg1.onmouseover=function () {
+        oRgb1.style.display='block';
+        oRgba1.style.display='block';
+    };
+
+    oImg2.onmouseover=function () {
+        oRgb2.style.display='block';
+        oRgba2.style.display='block';
+    };
+
+    oImg1.onmouseout=function () {
+        oRgb1.style.display='none';
+        oRgba1.style.display='none';
+    };
+
+    oImg2.onmouseout=function () {
+        oRgb2.style.display='none';
+        oRgba2.style.display='none';
     };
 </script>
 </body>
