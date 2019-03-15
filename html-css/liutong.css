@@ -32,15 +32,17 @@ body{
     height: 50px;
     background: #ffffff;
     border: 1px solid #ccc;
+    position: fixed;
+    z-index: 100;
 }
 #top{
     width: 1230px;
     height: 50px;
-    margin: 0 auto;
     background: #fff;
-    position: relative;
+    position: fixed;
     top: 0;
-    z-index: 10;
+    left: 50%;
+    transform: translate(-50%);
 }
 #top #top1{
     width: 90px;
@@ -167,6 +169,7 @@ body{
     height: 350px;
     background: url(../imgs/8.jpg) no-repeat 0 0;
     background-size: cover;
+    z-index: 10;
 }
 /*头像*/
 #photo #picture{
@@ -292,57 +295,154 @@ body{
     top: 402px;
     transform: translate(-50%);
 }
-#across .span{
-    margin-right: 100px;
-    display: inline-block;
+#pad{
+    width: 240px;
     height: 40px;
+    position: absolute;
+    left: 50%;
+    transform:translate(-50%);
+}
+#pad .span{
+    display: block;
+    height: 38px;
     cursor: pointer;
     line-height: 40px;
 }
-#across .span:last-child{
-    margin-right: 0;
-}
-#across #pad{
+#pad #span1{
+    width: 64px;
     position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-}
-
-/*轮播图*/
-#big-box{
-    width: 1000px;
-    position: relative;
-    margin: 500px auto;
-}
-#big-box #box{
-    width: 1000px;
-    height: 567px;
-    position: relative;
-    top: 0;
     left: 0;
 }
-#big-box img{
-    position:absolute;
-    width: 1000px;
-    transition:opacity 2s ease;
-    opacity: 0;
-}
-#big-box .aa{
-    opacity: 1;
-}
-#big-box #btn1{
+#pad #span2{
+    width: 64px;
     position: absolute;
-    bottom: 10px;
-    left:50%;
-    transform: translateX(-50%);
+    top: 0;
+    left: 104px;
 }
-#big-box #btn1 div{
-    width: 60px;
-    height: 12px;
-    background:rgba(0,0,0,.4);
-    float:left;
-    margin-right: 5px;
+#pad #span3{
+    width: 32px;
+    position: absolute;
+    top: 0;
+    left: 208px;
 }
-#big-box #btn1 .small{
-    background: #ccc;
+#pad span.thick{
+    font-weight: bolder;
+    border-bottom: 2px solid #f88208;
+}
+#pad span:hover{
+    border-bottom: 2px solid #f88208;
+}
+/*选项卡*/
+#xia{
+    position: absolute;
+    top: 40px;
+    width: 900px;
+    height: 1000px;
+}
+#xia > div{
+    display:none;
+}
+#across #xia .xianshi{
+    display:block;
+}
+/*左上*/
+#top-left{
+    width: 249px;
+    height: 60px;
+    background: #ffffff;
+    border-radius: 3px;
+    position: absolute;
+    top: 10px;
+    color: #666666;
+}
+#top-left .top-left{
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%);
+}
+#top-left>div:hover .top-left{
+    color: #75aa67;
+}
+#top-left .top-left1{
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%);
+}
+#top-left #tl1{
+    width: 82px;
+    height: 42px;
+    border-right: 1px solid #ccc;
+    cursor:pointer;
+    font-size: 12px;
+    position: absolute;
+    left: 0;
+    top: 9px;
+}
+#top-left #tl2{
+    width: 82px;
+    height: 42px;
+    border-right: 1px solid #ccc;
+    cursor:pointer;
+    font-size: 12px;
+    position: absolute;
+    top: 9px;
+    left: 83px;
+}
+#top-left #tl3{
+    width: 82px;
+    height: 42px;
+    border-right: 1px solid #ccc;
+    cursor:pointer;
+    font-size: 12px;
+    position: absolute;
+    top: 9px;
+    left: 166px;
+    border-right: none;
+}
+/*左边*/
+#left-one{
+    width: 249px;
+    height: 400px;
+    border-radius: 3px;
+    background: #ffffff;
+    position: absolute;
+    top: 80px;
+}
+#left-one #lo1{
+    width: 90px;
+    height: 30px;
+    border-right: 1px solid #ccc;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+#left-one #lo1>img{
+    width: 85px;
+    cursor:pointer;
+}
+#left-one #lo2{
+    width: 85px;
+    height: 30px;
+    position: absolute;
+    top: 17px;
+    left: 110px;
+}
+#left-one #lo2>img{
+    width: 40px;
+    cursor: pointer;
+}
+#left-one #left-one-aa{
+    line-height: 30px;
+    width: 239px;
+    height: 30px;
+    padding: 0 0 5px 10px;
+    position: absolute;
+    top: 44px;
+    font-size: 13px;
+    color: #555;
+    border-bottom: 1px solid #ccc;
 }

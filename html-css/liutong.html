@@ -47,9 +47,39 @@
 
         <div id="across">
             <div id="pad">
-                <span class="span"><b>他的主页</b></span>
-                <span class="span">他的相册</span>
-                <span class="span">作品</span>
+                <span id="span1" class="span thick">他的主页</span>
+                <span id="span2" class="span">他的相册</span>
+                <span id="span3" class="span">作品</span>
+            </div>
+            <div id="xia">
+                <div class="xianshi">
+                    <div id="top-left">
+                        <div id="tl1">
+                            <span class="top-left">1323</span>
+                            <br>
+                            <span class="top-left1">关注</span>
+                        </div>
+                        <div id="tl2">
+                            <span class="top-left">24799368</span>
+                            <br>
+                            <span class="top-left1">粉丝</span>
+                        </div>
+                        <div id="tl3">
+                            <span class="top-left">9398</span>
+                            <br>
+                            <span class="top-left1">微博</span>
+                        </div>
+                    </div>
+                    <div id="left-one">
+                        <div id="lo1"><img src="../imgs/微博认证.PNG" alt=""></div>
+                        <div id="lo2"><img src="../imgs/等级.PNG" alt=""></div>
+                        <div id="left-one-aa">
+                            <span>青年作家、光线影业副总裁</span>
+                        </div>
+                    </div>
+                </div>
+                <div>222222</div>
+                <div>333333</div>
             </div>
         </div>
 
@@ -90,5 +120,28 @@
     </div>
 
 </div>
+
+<script>
+    var oPad=document.getElementById('pad');
+    var aSpan=oPad.getElementsByTagName('span');
+
+    var oXia=document.getElementById('xia');
+    var aDiv=oXia.getElementsByTagName('div');
+
+    for(var i=0;i<aSpan.length;i++){
+        aSpan[i].index=i;
+        aSpan[i].onclick=function(){
+            change(this.index);
+        };
+        function change(num){
+            for(var i=0; i<aSpan.length;i++){
+                aSpan[i].className = "span";
+                aDiv[i].className = "";
+            }
+            aSpan[num].className = "span thick";
+            aDiv[num].className = "xianshi";
+        }
+    };
+</script>
 </body>
 </html>
