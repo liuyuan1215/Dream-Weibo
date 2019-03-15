@@ -406,7 +406,7 @@ body{
 /*左边*/
 #left-one{
     width: 249px;
-    height: 400px;
+    height: 370px;
     border-radius: 3px;
     background: #ffffff;
     position: absolute;
@@ -436,13 +436,231 @@ body{
     cursor: pointer;
 }
 #left-one #left-one-aa{
-    line-height: 30px;
+     line-height: 30px;
+     width: 239px;
+     height: 30px;
+     padding: 0 0 5px 10px;
+     position: absolute;
+     top: 44px;
+     font-size: 13px;
+     color: #555;
+     border-bottom: 1px solid #ccc;
+ }
+#left-one #position{
     width: 239px;
     height: 30px;
     padding: 0 0 5px 10px;
     position: absolute;
-    top: 44px;
+    top: 84px;
     font-size: 13px;
     color: #555;
     border-bottom: 1px solid #ccc;
+}
+#left-one #position > img{
+    width: 22px;
+    position: absolute;
+    top: 6px;
+}
+#left-one #position > span{
+    position: absolute;
+    left: 35px;
+    top: 9px;
+}
+#left-one #graduation{
+    width: 239px;
+    height: 30px;
+    padding: 0 0 5px 10px;
+    position: absolute;
+    top: 120px;
+    font-size: 13px;
+    color: #555;
+    border-bottom: 1px solid #ccc;
+}
+#left-one #graduation > img{
+    width: 22px;
+    position: absolute;
+    top: 6px;
+}
+#left-one #graduation #gs1{
+    position: absolute;
+    left: 35px;
+    top: 9px;
+}
+#left-one #graduation #gs2{
+    position: absolute;
+    left: 80px;
+    top: 9px;
+    cursor:pointer;
+    color:#75aa67;
+}
+#left-one #company{
+    width: 239px;
+    height: 30px;
+    padding: 0 0 5px 10px;
+    position: absolute;
+    top: 156px;
+    font-size: 13px;
+    color: #555;
+    border-bottom: 1px solid #ccc;
+}
+#left-one #company > img{
+    width: 22px;
+    position: absolute;
+    top: 8px;
+}
+#left-one #company #cs1{
+    position: absolute;
+    left: 35px;
+    top: 9px;
+}
+#left-one #company #cs2{
+    position: absolute;
+    left: 67px;
+    top: 9px;
+    cursor:pointer;
+    color:#75aa67;
+}
+#left-one #birthday{
+    width: 239px;
+    height: 30px;
+    padding: 0 0 5px 10px;
+    position: absolute;
+    top: 192px;
+    font-size: 13px;
+    color: #555;
+    border-bottom: 1px solid #ccc;
+}
+#left-one #birthday > img{
+    width: 22px;
+    position: absolute;
+    top: 8px;
+}
+#left-one #birthday > span{
+    position: absolute;
+    left: 35px;
+    top: 9px;
+}
+#left-one #introduction{
+    width: 239px;
+    height: 100px;
+    padding: 0 0 5px 10px;
+    position: absolute;
+    top: 228px;
+    font-size: 13px;
+    color: #555;
+    border-bottom: 1px solid #ccc;
+}
+#introduction #i-img > img{
+    position: absolute;
+    top: 8px;
+    width: 22px;
+}
+#introduction #i-text{
+    width: 210px;
+    height: 100px;
+    display: inline-block;
+    position: absolute;
+    top: 8px;
+    left: 35px;
+}
+#left-one #check{
+    width: 239px;
+    height: 30px;
+    padding: 0 0 5px 10px;
+    position: absolute;
+    top: 334px;
+    font-size: 13px;
+    color: #555;
+    text-align: center;
+    line-height: 30px;
+    cursor:pointer;
+}
+#left-one #check:hover #check-s1{
+    color:#75aa67;
+}
+#left-one #check:hover #check-s2{
+    color:#f88208;
+}
+#left-two{
+    width: 249px;
+    height: 370px;
+    border-radius: 3px;
+    background: #ffffff;
+    position: absolute;
+    top: 460px;
+}
+
+
+/*他的相册*/
+#Photo-album{
+    width: 900px;
+    height: 1000px;
+    background: #ffffff;
+    position: absolute;
+    top: 51px;
+}
+#pa1{
+    position: sticky;
+    margin-top: 10px;
+    top: 60px;
+    width: 900px;
+    height: 40px;
+    border: 1px solid #ccc;
+    line-height: 40px;
+    background: #ff0000;
+    border-radius: 3px;
+    z-index: 1000000;
+}
+#pa1 > span{
+    height: 39px;
+    margin-left: 15px;
+    cursor:pointer;
+    display: inline-block;
+}
+#pa1 .pic-xianshi{
+    font-weight: bolder;
+    border-bottom: 1px solid #ccc;
+}
+#Photo-album > div{
+    display: none;
+}
+#Photo-album .zhong{
+    display: block;
+}
+
+/*照片墙*/
+#month{
+    position: absolute;
+}
+#month #month1{
+     width: 890px;
+    height: 200px;
+     color:#666;
+     font-size: 13px;
+    padding-left: 10px;
+     position: absolute;
+     top: 10px;
+    border-bottom: 1px solid #ccc;
+ }
+#wai-zhao1 img{
+    width: 200px;
+    position: absolute;
+    top: 40px;
+    left: 15px;
+}
+#month #month2{
+    width: 890px;
+    height: 200px;
+    color:#666;
+    font-size: 13px;
+    padding-left: 10px;
+    position: absolute;
+    top: 220px;
+    border-bottom: 1px solid #ccc;
+}
+#wai-zhao2 img{
+    width: 200px;
+    position: absolute;
+    top: 250px;
+    left: 15px;
 }
