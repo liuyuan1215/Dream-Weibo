@@ -139,7 +139,7 @@ body{
     width: 12px;
     height: 12px;
     transform: rotate(45deg);
-    background: #fff;
+    background: transparent;
     position: absolute;
     top: -6px;
     border-left-color: #ccc;
@@ -642,29 +642,41 @@ body{
 }
 
 /*照片墙*/
+#d-img1,#d-img2{
+    width: 200px;
+    height: 150px;
+    overflow: hidden;
+    cursor: pointer;
+}
+#d-img1{
+    position: absolute;
+    top: 40px;
+    left: 15px;
+}
+#d-img2{
+    position: absolute;
+    top: 250px;
+    left: 15px;
+}
 #month{
     position: absolute;
 }
 #month #month1{
-     width: 890px;
+    width: 890px;
     height: 200px;
-     color:#666;
-     font-size: 13px;
+    color:#666;
+    font-size: 13px;
     padding-left: 10px;
-     position: absolute;
-     top: 10px;
+    position: absolute;
+    top: 10px;
     border-bottom: 1px solid #ccc;
  }
 #wai-zhao1 img{
     width: 210px;
-    position: absolute;
-    top: 40px;
-    left: 15px;
-    cursor: pointer;
 }
 #month #month2{
     width: 890px;
-    height: 210px;
+    height: 200px;
     color:#666;
     font-size: 13px;
     padding-left: 10px;
@@ -674,20 +686,17 @@ body{
 }
 #wai-zhao2 img{
     width: 210px;
-    position: absolute;
-    top: 250px;
-    left: 15px;
-    cursor: pointer;
 }
 /*照片hover*/
 #rgb1,#rgb2{
-    width: 80px;
-    height: 35px;
+    width: 70px;
+    height: 30px;
     background: rgba(0,0,0,.3);
     color:#fff;
+    font-size: 12px;
     border-radius: 5px;
     text-align: center;
-    line-height: 35px;
+    line-height: 30px;
     display: none;
     cursor: pointer;
 }
@@ -708,21 +717,22 @@ body{
     left: 142px;
 }
 #rgba1,#rgba2{
-    width: 210px;
-    height: 35px;
+    width: 200px;
+    height: 30px;
     background: rgba(0,0,0,.3);
     color:#fff;
-    line-height: 35px;
+    line-height: 30px;
     position: absolute;
     left: 15px;
     cursor: pointer;
     display: none;
+    font-size: 12px;
 }
 #rgba1{
     top: 162px;
 }
 #rgba2{
-    top: 382px;
+    top: 372px;
 }
 #r-one,#r-three{
     position: absolute;

@@ -125,7 +125,9 @@
                             <div id="month">
                                 <div id="month1">03月</div>
                                 <div id="wai-zhao1">
-                                    <img class="img1" src="../imgs/zhaopian1.jpg" alt="">
+                                    <div id="d-img1">
+                                        <img class="img1" src="../imgs/zhaopian1.jpg" alt="">
+                                    </div>
                                     <div title="赞" id="rgb1">
                                         <i class="iconfont icon-zan"></i>
                                         &nbsp;16797
@@ -143,7 +145,9 @@
                                 </div>
                                 <div id="month2">02月</div>
                                 <div id="wai-zhao2">
-                                    <img class="img2" src="../imgs/zhaopian2.jpg" alt="">
+                                    <div id="d-img2">
+                                        <img class="img2" src="../imgs/zhaopian2.jpg" alt="">
+                                    </div>
                                     <div title="赞" id="rgb2">
                                         <i class="iconfont icon-zan"></i>
                                         &nbsp;40588
@@ -225,12 +229,12 @@
 
 
     var oZhao1=document.getElementById('wai-zhao1');
-    var oImg1=oZhao1.getElementsByClassName('img1');
+    var oDimg1=document.getElementById('d-img1');
     var oRgb1=document.getElementById('rgb1');
     var oRgba1=document.getElementById('rgba1');
 
     var oZhao2=document.getElementById('wai-zhao2');
-    var oImg2=oZhao2.getElementsByClassName('img2');
+    var oDimg2=document.getElementById('d-img2');
     var oRgb2=document.getElementById('rgb2');
     var oRgba2=document.getElementById('rgba2');
 
@@ -265,25 +269,25 @@
         }
     };
 
-    oImg1.onmouseover=function () {
-        oRgb1.style.display='block';
-        oRgba1.style.display='block';
-    };
-
-    oImg2.onmouseover=function () {
-        oRgb2.style.display='block';
-        oRgba2.style.display='block';
-    };
-
-    oImg1.onmouseout=function () {
-        oRgb1.style.display='none';
-        oRgba1.style.display='none';
-    };
-
-    oImg2.onmouseout=function () {
-        oRgb2.style.display='none';
-        oRgba2.style.display='none';
-    };
+    // oDimg1.onmouseover=function () {
+    //     oRgb1.style.display='block';
+    //     oRgba1.style.display='block';
+    // };
+    //
+    // oDimg2.onmouseover=function () {
+    //     oRgb2.style.display='block';
+    //     oRgba2.style.display='block';
+    // };
+    //
+    // oDimg1.onmouseout=function () {
+    //     oRgb1.style.display='none';
+    //     oRgba1.style.display='none';
+    // };
+    //
+    // oDimg2.onmouseout=function () {
+    //     oRgb2.style.display='none';
+    //     oRgba2.style.display='none';
+    // };
 </script>
 </body>
 </html>
