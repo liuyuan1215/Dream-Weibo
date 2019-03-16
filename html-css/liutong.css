@@ -96,13 +96,17 @@ body{
     margin-right: 2px;
 }
 #list .top2{
+    display: block;
     width: 40px;
+    height: 30px;
     color: #767272;
     position: relative;
+    cursor:pointer;
 }
 #list .top3{
     width: 40px;
     color: #f88208;
+    cursor:pointer;
 }
 #list .bian:hover{
     color: #f88208;
