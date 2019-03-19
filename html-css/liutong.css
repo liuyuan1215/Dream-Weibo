@@ -597,13 +597,84 @@ body{
 #top-right{
     width: 638px;
     height: 40px;
-    background: #fff;
+    background: #f2f2f5;
     border-radius: 3px;
     position: sticky;
     margin: 10px 0 0 262px;
-    top: 60px;
 }
-
+#tr{
+    width: 240px;
+    border-radius: 3px;
+    position: absolute;
+}
+#tr .top-r{
+    width: 79px;
+    height: 38px;
+    text-align: center;
+    line-height: 38px;
+    cursor: pointer;
+    font-size: 13px;
+}
+#top-r1{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#top-r2{
+    position: absolute;
+    top: 0;
+    left: 80px;
+}
+#top-r3{
+    position: absolute;
+    top: 0;
+    left: 160px;
+}
+#top-right #top-i2{
+     font-size: 14px;
+     color:#f88208;
+ }
+#top-right #top-i3{
+    width: 20px;
+    height: 20px;
+    background: #ff0000;
+    font-size: 11px;
+}
+#tr .top-xian{
+    background: #ffffff;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-bottom: 2px solid #f88208;
+    font-weight: bolder;
+}
+#tr .top-r:hover{
+    color: #87a840;
+    border-bottom: 2px solid #f88208;
+}
+#tr .top-r:hover #top-i3{
+    color:#f88208;
+}
+/*右边的二级菜单*/
+#wai-more{
+    width: 75px;
+    height: 186px;
+    border-radius: 3px;
+    background: #fff;
+    position: absolute;
+    top: 40px;
+    display: none;
+}
+#wai-more #more{
+    width: 75px;
+    height: 180px;
+    position: absolute;
+    top: 3px;
+}
+#more .second{
+    width: 75px;
+    height: 30px;
+    background: #ffffff;
+}
 /*他的相册*/
 #Photo-album{
     width: 900px;
@@ -615,7 +686,6 @@ body{
 #pa1{
     position: sticky;
     margin-top: 10px;
-    top: 60px;
     width: 900px;
     height: 40px;
     border: 1px solid #ccc;
@@ -699,22 +769,12 @@ body{
     line-height: 30px;
     display: none;
     cursor: pointer;
-}
-#rgb1{
     position: absolute;
-    top: 42px;
-    left: 142px;
+    top: 8px;
+    right: 8px;
 }
-#rgb1:hover{
+#rgb1:hover,#rgb2:hover{
     color:#f88208;
-}
-#rgb2:hover{
-    color:#f88208;
-}
-#rgb2{
-    position: absolute;
-    top: 252px;
-    left: 142px;
 }
 #rgba1,#rgba2{
     width: 200px;
@@ -723,16 +783,11 @@ body{
     color:#fff;
     line-height: 30px;
     position: absolute;
-    left: 15px;
+    left: 0;
     cursor: pointer;
     display: none;
     font-size: 12px;
-}
-#rgba1{
-    top: 162px;
-}
-#rgba2{
-    top: 372px;
+    bottom: 0;
 }
 #r-one,#r-three{
     position: absolute;
