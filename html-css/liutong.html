@@ -252,6 +252,7 @@
     var oTopr=document.getElementById('tr');
     var aTrdiv=oTopr.getElementsByClassName('top-r');
 
+    var oTopr3=document.getElementById('top-r3');
     var oThree=document.getElementById('top-i3');
     var oMore=document.getElementById('wai-more');
 
@@ -299,10 +300,10 @@
     oThree.onclick=function () {
         oMore.style.display='block';
     };
-    document.onclick=function(e){
+    oTopr3.onclick=function(e){
         e = e || window.event;
         var target = e.target || e.srcElement;
-        if(target.Id == 'top-i3'){
+        if(target.tagName == 'i'){
             oMore.style.display='block';
         }else{
             oMore.style.display='none';
