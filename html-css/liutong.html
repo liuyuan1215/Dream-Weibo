@@ -297,17 +297,19 @@
         }
     };
 
-    oThree.onclick=function () {
-        oMore.style.display='block';
-    };
+    // oThree.onclick=function () {
+    //     oMore.style.display='block';
+    // };
     oTopr3.onclick=function(e){
-        e = e || window.event;
-        var target = e.target || e.srcElement;
-        if(target.tagName == 'i'){
+        e=e || window.event;
+        var target=e.target || e.srcElement;
+        if(target.tagName == 'I'){
+            // console.log(target.innerHTML);
             oMore.style.display='block';
-        }else{
-            oMore.style.display='none';
         }
+        // else if(target.tagName !== 'i'){
+        //     oMore.style.display='none';
+        // }
     };
 
     for(var t=0;t<aTrdiv.length;t++){
