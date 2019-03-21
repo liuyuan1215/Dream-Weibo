@@ -851,8 +851,26 @@ body{
 #two-2,#two-4,#two-5{
     color:#767272;
 }
+#two-6{
+    cursor: pointer;
+}
 #weibo-two #chaohua{
     color: #87a840;
+    cursor: pointer;
+}
+#weibo-two #chaohua #chtb{
+    font-size: 15px;
+    font-weight: bolder;
+}
+/*书的照片*/
+#weibo-three{
+    width: 100px;
+    position: absolute;
+    top: 230px;
+    left: 78px;
+}
+#weibo-three #book{
+    width: 100px;
 }
 /*他的相册*/
 #Photo-album{
