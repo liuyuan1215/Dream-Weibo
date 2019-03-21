@@ -14,6 +14,11 @@
         </div>
         <div id="middle">
             <div id="photo">
+                <div id="animation" title="我也要用">
+                    <img id="animation1" src="../imgs/tree.jpg" alt="">
+                    <div id="border"></div>
+                    <img id="animation2" src="../imgs/tree.jpg" alt="">
+                </div>
                 <div id="picture"></div>
                 <div id="text">
                     <h2>刘同</h2>
@@ -133,7 +138,7 @@
                         <div id="tr-next">
                             <div id="tr-next1" class="tr-next tr-next-xian">
                                 <form action="">
-                                    <input type="text" id="input" placeholder="搜索他的微博">
+                                    <input type="text" id="input" value="搜索他的微博">
                                     <i id="input-search" class="iconfont icon-soushuo" title="搜索"></i>
                                     <i id="input-triangle" class="iconfont icon-arrDown" title="高级搜索"></i>
                                 </form>
@@ -246,6 +251,7 @@
 
 </div>
 
+<script src="jquery-1.12.4.js"></script>
 <script>
     var oPad=document.getElementById('pad');
     var aSpan=oPad.getElementsByTagName('span');
@@ -276,7 +282,8 @@
     var oRgb2=document.getElementById('rgb2');
     var oRgba2=document.getElementById('rgba2');
 
-
+    var oAnimation=document.getElementById('animation');
+    var oAnimation1=document.getElementById('animation1');
 
     for(var i=0;i<aSpan.length;i++){
         aSpan[i].index=i;
@@ -349,6 +356,24 @@
     oDimg2.onmouseout=function () {
         oRgb2.style.display='none';
         oRgba2.style.display='none';
+    };
+
+
+    $('#input').on('focus',function(){
+        $(this).addClass('bg');
+        if(this.value==this.defaultValue)
+            this.value='';
+    }).on('blur',function(){
+        $(this).removeClass('bg');
+        if(this.value=='')
+            this.value=this.defaultValue;
+    });
+
+    oAnimation.onmouseover=function(){
+        oAnimation1.style.display="block";
+    };
+    oAnimation.onmouseout=function(){
+        oAnimation1.style.display="none";
     };
 </script>
 </body>

@@ -175,6 +175,38 @@ body{
     background-size: cover;
     z-index: 10;
 }
+/*动画*/
+#animation{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor:pointer;
+}
+#border{
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#animation1,#animation2{
+    width: 20px;
+    border: 2px solid #fff;
+    position: absolute;
+}
+#animation1{
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 1;
+}
+#animation2{
+    right: 0;
+    bottom: 0;
+}
 /*头像*/
 #photo #picture{
     width: 100px;
@@ -698,6 +730,7 @@ body{
     position: absolute;
     right: 5px;
     top: -44px;
+    color:rgba(0,0,0,.6);
 }
 #input-search{
     color:#bbb;
@@ -717,6 +750,11 @@ body{
 #input-triangle:hover{
     color:#f88208;
 }
+.bg{
+    outline: none;
+    border:1px solid #f88208;
+}
+
 /*他的相册*/
 #Photo-album{
     width: 900px;
