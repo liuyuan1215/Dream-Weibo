@@ -644,33 +644,78 @@ body{
     border-bottom: 2px solid #f88208;
     font-weight: bolder;
 }
-#tr .top-r:hover{
+#tr >.top-r:hover{
     color: #87a840;
     border-bottom: 2px solid #f88208;
 }
-#tr .top-r:hover #top-i3{
+#tr .top-r:hover >#top-i3{
     color:#f88208;
 }
 /*右边的二级菜单*/
-#wai-more{
-    width: 75px;
-    height: 186px;
-    border-radius: 3px;
-    background: #fff;
-    position: absolute;
-    top: 40px;
-    display: none;
-}
-#wai-more #more{
+#more{
     width: 75px;
     height: 180px;
     position: absolute;
-    top: 3px;
+    top: 40px;
+    border-radius: 4px;
+    display: none;
+    z-index: 3;
+    border: 1px solid #ccc;
 }
 #more .second{
     width: 75px;
     height: 30px;
     background: #ffffff;
+    color:#000;
+    line-height: 30px;
+}
+#more .second:hover{
+    background: #eee;
+    color:#f88208;
+}
+/*右边选项卡*/
+#tr-next{
+    position: absolute;
+}
+#tr-next .tr-next{
+    width: 638px;
+    height: 500px;
+    background: #ffffff;
+    border-radius: 3px;
+    position: absolute;
+    top: 50px;
+    display: none;
+}
+#tr-next .tr-next-xian{
+    display: block;
+}
+/*搜索*/
+#input{
+    width: 170px;
+    height: 25px;
+    text-indent: 4px;
+    birder:1px solid #ccc;
+    position: absolute;
+    right: 5px;
+    top: -44px;
+}
+#input-search{
+    color:#bbb;
+    font-size: 15px;
+    position: absolute;
+    right: 18px;
+    top: -37px;
+}
+#input-triangle{
+    color:#aaa;
+    font-size: 15px;
+    position: absolute;
+    right: 5px;
+    top: -37px;
+    cursor:pointer;
+}
+#input-triangle:hover{
+    color:#f88208;
 }
 /*他的相册*/
 #Photo-album{

@@ -118,7 +118,7 @@
                             <div id="top-r3" class="top-r">
                                 更多
                                 <i id="top-i3" class="iconfont icon-fanhui-copy-copy-copy-copy-copy-copy"></i>
-                                <div id="wai-more">
+                                <!--<div id="wai-more">-->
                                     <ul id="more">
                                         <li class="second">原创</li>
                                         <li class="second">视频</li>
@@ -127,8 +127,19 @@
                                         <li class="second">文章</li>
                                         <li class="second">标签</li>
                                     </ul>
-                                </div>
+                                <!--</div>-->
                             </div>
+                        </div>
+                        <div id="tr-next">
+                            <div id="tr-next1" class="tr-next tr-next-xian">
+                                <form action="">
+                                    <input type="text" id="input" placeholder="搜索他的微博">
+                                    <i id="input-search" class="iconfont icon-soushuo" title="搜索"></i>
+                                    <i id="input-triangle" class="iconfont icon-arrDown" title="高级搜索"></i>
+                                </form>
+                            </div>
+                            <div id="tr-next2" class="tr-next">2</div>
+                            <div id="tr-next3" class="tr-next">3</div>
                         </div>
                     </div>
                 </div>
@@ -251,20 +262,20 @@
 
     var oTopr=document.getElementById('tr');
     var aTrdiv=oTopr.getElementsByClassName('top-r');
+    var oTrnext=document.getElementById('tr-next');
+    var aTnext=oTrnext.getElementsByClassName('tr-next');
 
-    var oTopr3=document.getElementById('top-r3');
     var oThree=document.getElementById('top-i3');
-    var oMore=document.getElementById('wai-more');
+    var oMore=document.getElementById('more');
 
-    var oZhao1=document.getElementById('wai-zhao1');
     var oDimg1=document.getElementById('d-img1');
     var oRgb1=document.getElementById('rgb1');
     var oRgba1=document.getElementById('rgba1');
 
-    var oZhao2=document.getElementById('wai-zhao2');
     var oDimg2=document.getElementById('d-img2');
     var oRgb2=document.getElementById('rgb2');
     var oRgba2=document.getElementById('rgba2');
+
 
 
     for(var i=0;i<aSpan.length;i++){
@@ -297,19 +308,12 @@
         }
     };
 
-    // oThree.onclick=function () {
-    //     oMore.style.display='block';
-    // };
-    oTopr3.onclick=function(e){
-        e=e || window.event;
-        var target=e.target || e.srcElement;
-        if(target.tagName == 'I'){
-            // console.log(target.innerHTML);
-            oMore.style.display='block';
-        }
-        // else if(target.tagName !== 'i'){
-        //     oMore.style.display='none';
-        // }
+    oThree.onclick=function (e) {
+        oMore.style.display='block';
+        e.stopPropagation();
+    };
+    document.onclick =  function(){
+        oMore.style.display='none';
     };
 
     for(var t=0;t<aTrdiv.length;t++){
@@ -320,8 +324,10 @@
         function change2(num){
             for(var t=0;t<aTrdiv.length;t++){
                 aTrdiv[t].className = "top-r";
+                aTnext[t].className = "tr-next";
             }
             aTrdiv[num].className = "top-r top-xian";
+            aTnext[num].className = "tr-next tr-next-xian";
         }
     }
 
