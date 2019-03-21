@@ -871,6 +871,17 @@ body{
 }
 #weibo-three #book{
     width: 100px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+#weibo-three #big{
+    width: 300px;
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    border: 1px solid #ccc;
 }
 /*他的相册*/
 #Photo-album{

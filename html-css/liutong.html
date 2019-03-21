@@ -174,6 +174,7 @@
                             </div>
                             <div id="weibo-three">
                                 <img id="book" src="../imgs/book.jpg" alt="">
+                                <img id="big" src="../imgs/book.jpg" alt="">
                             </div>
                             <div id="tr-next2" class="tr-next">热门</div>
                             <div id="tr-next3" class="tr-next">更多</div>
@@ -317,6 +318,9 @@
     var oAnimation=document.getElementById('animation');
     var oAnimation1=document.getElementById('animation1');
 
+    var oWeibo3=document.getElementById('weibo-three');
+    var oBig=document.getElementById('big');
+
     for(var i=0;i<aSpan.length;i++){
         aSpan[i].index=i;
         aSpan[i].onclick=function(){
@@ -353,6 +357,14 @@
     };
     document.onclick =  function(){
         oMore.style.display='none';
+    };
+
+    oWeibo3.onclick=function (e) {
+        oBig.style.display='block';
+        e.stopPropagation();
+    };
+    document.onclick =  function(){
+        oBig.style.display='none';
     };
 
     for(var t=0;t<aTrdiv.length;t++){
