@@ -135,21 +135,6 @@ body{
     text-align: center;
     line-height: 30px;
 }
-.triangle::after{
-    content: '';
-    width: 12px;
-    height: 12px;
-    transform: rotate(45deg);
-    background: transparent;
-    position: absolute;
-    top: -6px;
-    border-left-color: #ccc;
-    border-left-width: 1px;
-    border-left-style:solid;
-    border-top-color: #ccc;
-    border-top-width: 1px;
-    border-top-style:solid;
-}
 #two .xia{
     border-bottom: 1px solid #ccc;
 }
@@ -303,6 +288,10 @@ body{
     height: 140px;
     display: none;
     z-index: 2;
+    border-radius: 2px;
+    box-shadow: 0 0 5px #aaa;
+    position: absolute;
+    top: 37px;
 }
 #aa1 .bb,#aa2 .bb{
     height: 35px;
@@ -321,7 +310,6 @@ body{
 #btn #a4:hover #aa2{
     display: block;
 }
-
 /*白条*/
 #across{
     background: #ffffff;
@@ -996,7 +984,7 @@ body{
     height: 40px;
     border: 1px solid #ccc;
     line-height: 40px;
-    background: #ff0000;
+    background: #fff;
     border-radius: 3px;
     z-index: 1000000;
 }

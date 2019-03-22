@@ -5,6 +5,7 @@
     <title>刘同的微博_微博</title>
     <link rel="stylesheet" href="liutong.css">
     <link rel="stylesheet" href="iconfont.css">
+    <link rel="shortcut icon" href="../imgs/bitbug_favicon.ico">
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1077826_ntimpzo7vcq.css">
 </head>
 <body>
@@ -283,7 +284,7 @@
                 <li class="top top2 bian"><i class="iconfont icon-youjian"></i></li>
                 <li class="top top2 bian">
                     <i class="iconfont icon-shezhi"></i>
-                    <ul id="two" class="triangle">
+                    <ul id="two">
                         <li class="second">账号设置</li>
                         <li class="second">会员中心</li>
                         <li class="second">V认证</li>
@@ -300,7 +301,6 @@
         </div>
     </div>
     </div>
-
 </div>
 
 <script src="jquery-1.12.4.js"></script>
@@ -310,7 +310,6 @@
 
     var oXia=document.getElementById('xia');
     var aDiv=oXia.getElementsByClassName('xuan');
-
 
     var oPa1=document.getElementById('pa1');
     var aSpan2=oPa1.getElementsByClassName('pxpx');
@@ -378,11 +377,10 @@
         oMore.style.display='none';
     };
 
-    oWeibo3.onclick=function (e) {
+    oWeibo3.onmouseover=function () {
         oBig.style.display='block';
-        e.stopPropagation();
     };
-    document.onclick =  function(){
+    document.onmouseout =  function(){
         oBig.style.display='none';
     };
 
