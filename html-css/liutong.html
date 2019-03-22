@@ -188,7 +188,7 @@
                                         <li class="five-same"><i class="iconfont icon-shoucang change"></i>&nbsp;收藏</li>
                                         <li class="five-same"><i class="iconfont icon-zhuanfa change"></i>&nbsp;9489</li>
                                         <li class="five-same"><i class="iconfont icon-pinglun change"></i>&nbsp;5224</li>
-                                        <li class="five-same" title="赞"><i class="iconfont icon-zan nochange"></i>&nbsp;5195</li>
+                                        <li id="good" class="five-same" title="赞"><i id="wanmei" class="iconfont icon-zan nochange"></i>&nbsp;5195</li>
                                     </ul>
                                 </div>
                                 <div id="weibo-six1"></div>
@@ -338,6 +338,16 @@
 
     var oWeibo3=document.getElementById('weibo-three');
     var oBig=document.getElementById('big');
+
+    var oGood=document.getElementById('good');
+    var oWanmei=document.getElementById('wanmei');
+
+    oGood.onclick=function(){
+        oWanmei.style.color='#f88208';
+    };
+    oGood.ondblclick=function(){
+        oWanmei.style.color='#767272';
+    };
 
     for(var i=0;i<aSpan.length;i++){
         aSpan[i].index=i;
