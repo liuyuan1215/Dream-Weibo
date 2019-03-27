@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    touch-action: none;
+}
+body{
+    font-size: 0.32rem;
+}
+#bg{
+    /* position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; */
+    height: 100%;
+    background: #346d88;
+}
+#welcome{
+    color:#C3D6DD;
+    font-size: 0.32rem;
+    margin: 0.1rem 0.4rem;
+}
+#head{
+    margin: 0.1rem 0.2rem 0 0.2rem;
+    height: 0.8rem;
+    display: flex;
+    color:#fff;
+    text-align: center;
+    line-height: 0.8rem;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    z-index: 9;
+}
+#head .show{
+    background: #000000;
+}
+#head #head-one{
+    flex:1;
+}
+#head #head-two{
+    flex:1;
+    z-index: 9;
+}
+#head-two #about{
+    background: #ff0000;
+    height: 2rem;
+    z-index:9;
+}
+#head #head-three{
+    flex:1;
+}
+#head #head-four{
+    flex:1;
+}
+#pic{
+    height: 5rem;
+}
+
+#middle{
+    border:1px solid #fff;
+    height: 8.4rem;
+    margin: 0.2rem 0.2rem;
+}
+#middle-one{
+    background: #ff0000;
+    height: 2rem;
+    margin-bottom: 0.1rem;
+}
+#middle-two{
+    background: #0000ff;
+    height: 2rem;
+    margin-bottom: 0.1rem;
+}
+#middle-three{
+    background: #ffffff;
+    height: 2rem;
+    margin-bottom: 0.1rem;
+}
+#middle-four{
+    background: #ffff00;
+    height: 2rem;
+    margin-bottom: 0.1rem;
+}
+#end{
+    color:#C3D6DD;
+    font-size: 0.32rem;
+    text-align: center;
+    margin-bottom: 0.2rem;
+}
