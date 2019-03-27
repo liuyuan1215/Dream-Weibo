@@ -71,7 +71,19 @@ body{
 #pic{
     height: 5rem;
 }
+#pic>img{
+    width: 100%;
+    margin-top: 0.2rem;
+}
 /* 内容 */
+#top{
+    margin: 0.2rem 0 0 0.2rem;
+    color:#fff;
+    font-size: 0.28rem;
+}
+#top span{
+    border-bottom: 1px solid #fff;
+}
 #middle{
     border:1px solid #fff;
     height: 8.4rem;
