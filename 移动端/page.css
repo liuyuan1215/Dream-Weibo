@@ -7,19 +7,17 @@ body{
     font-size: 0.32rem;
 }
 #bg{
-    /* position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0; */
     height: 100%;
     background: #346d88;
 }
+/* 欢迎光临 */
 #welcome{
     color:#C3D6DD;
     font-size: 0.32rem;
-    margin: 0.1rem 0.4rem;
+    margin: 0rem 0.4rem;
+    padding-top: 0.1rem;
 }
+/* 导航菜单 */
 #head{
     margin: 0.1rem 0.2rem 0 0.2rem;
     height: 0.8rem;
@@ -41,21 +39,39 @@ body{
     flex:1;
     z-index: 9;
 }
-#head-two #about{
-    background: #ff0000;
-    height: 2rem;
-    z-index:9;
-}
 #head #head-three{
     flex:1;
+    z-index: 9;
 }
 #head #head-four{
     flex:1;
+    z-index: 9;
 }
+/* 二级菜单 */
+#second .elect{
+    background: #000;
+    height: 2rem;
+    position: absolute;
+    left: 0.2rem;
+    right: 0.2rem;
+    display: none;
+    text-align: center;
+    color: #fff;
+    margin-top: 1px;
+    border-radius: 10px;
+    transition: height;
+}
+#second #first{
+    height: 0;
+}
+#second .xian{
+    display: block;
+}
+/* 轮播图 */
 #pic{
     height: 5rem;
 }
-
+/* 内容 */
 #middle{
     border:1px solid #fff;
     height: 8.4rem;
@@ -81,9 +97,10 @@ body{
     height: 2rem;
     margin-bottom: 0.1rem;
 }
+/* 底部 */
 #end{
     color:#C3D6DD;
     font-size: 0.32rem;
     text-align: center;
-    margin-bottom: 0.2rem;
+    padding-bottom: 0.2rem;
 }
