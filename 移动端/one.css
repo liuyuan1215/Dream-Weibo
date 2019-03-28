@@ -40,3 +40,29 @@
 #bottom #bottom-four{
     flex:1;
 }
+
+
+
+.show{
+    color:#00A862;
+}
+#second .elect{
+    background: #000;
+    height: 2rem;
+    position: absolute;
+    left: 0.2rem;
+    right: 0.2rem;
+    bottom: 50px;
+    display: none;
+    text-align: center;
+    color: #fff;
+    margin-top: 1px;
+    border-radius: 10px;
+    transition: height;
+}
+#second #first{
+    height: 0;
+}
+#second .xian{
+    display: block;
+}
