@@ -50,12 +50,13 @@
     color:#00A862;
 }
 #second .elect{
-    background: #000;
+    background: #00A862;
+    font-size: 0.32rem;
     height: 2rem;
     position: absolute;
     left: 0.2rem;
     right: 0.2rem;
-    bottom: 50px;
+    bottom: 51px;
     display: none;
     text-align: center;
     color: #fff;
