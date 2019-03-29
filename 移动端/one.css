@@ -74,8 +74,44 @@
 }
 
 
+.change{
+    animation: change 1.5s ease forwards;
+}
+@keyframes change{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
 @media screen and (max-width:480px){
     #bottom{
         opacity: 1;
     }
+    .change{
+        animation: change 1s ease forwards;
+    }
+    @keyframes change{
+        0%{
+            transform: translateX(100%);
+        }
+        100%{
+            transform: translateX(0);
+        }
+    }
 }
+
+.moveToTop{
+    animation: moveToTop 0.7s ease forwards;
+}
+@keyframes moveToTop{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
