@@ -1,3 +1,11 @@
+#container{
+    /* background: #ff0000; */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
 /* 顶部 */
 #top #top-pic{
     height: 100%;
@@ -19,7 +27,7 @@
     border:none;
 }
 /* 底部 */
-#bottom{
+/* #bottom{
     width: 100%;
     height: 50px;
     display: flex;
@@ -27,7 +35,7 @@
     bottom: 0;
     background: #e7e7e7;
     color: rgba(0, 0, 0, 0.56);
-    /* color: #00A862; */
+    color: #00A862;
     line-height: 50px;
     text-align: center;
     opacity: 0;
@@ -44,21 +52,21 @@
 }
 #bottom #bottom-four{
     flex:1;
-}
+} */
 
-
-
-.show{
+/* .show{
     color:#00A862;
+}
+#second{
+    position: absolute;
+    left: 0.2rem;
+    right: 0.2rem;
+    bottom: 51px;
 }
 #second .elect{
     background: #00A862;
     font-size: 0.32rem;
     height: 2rem;
-    position: absolute;
-    left: 0.2rem;
-    right: 0.2rem;
-    bottom: 51px;
     display: none;
     text-align: center;
     color: #fff;
@@ -71,7 +79,7 @@
 }
 #second .xian{
     display: block;
-}
+} */
 
 
 .change{
@@ -86,7 +94,7 @@
     }
 }
 
-@media screen and (max-width:480px){
+/* @media screen and (max-width:480px){
     #bottom{
         opacity: 1;
     }
@@ -113,5 +121,14 @@
     100%{
         transform: translateY(0);
     }
-}
+} */
 
+#div1{
+    background: #ff0000;
+    width: 200px;
+    height: 200px;
+}
+#div1:hover{
+    background: #ffff00;
+    
+}
