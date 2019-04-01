@@ -24,6 +24,54 @@
 #nav-four{
     flex:1;
 }
+#one-1{
+    width: 200px;
+    height: 200px;
+    background: #018087;
+    margin-top: -20px;
+    margin-left: 20px;
+    display: none;
+    z-index: 10;
+}
+#nav-one:hover #one-1{
+    display:block;
+}
+#two-1{
+    width: 200px;
+    height: 200px;
+    background: #018087;
+    margin-top: -20px;
+    margin-left: 20px;
+    display: none;
+    z-index: 10;
+}
+#nav-two:hover #two-1{
+    display:block;
+}
+#three-1{
+    width: 200px;
+    height: 200px;
+    background: #018087;
+    margin-top: -20px;
+    margin-left: 20px;
+    display: none;
+    z-index: 10;
+}
+#nav-three:hover #three-1{
+    display:block;
+}
+#four-1{
+    width: 200px;
+    height: 200px;
+    background: #018087;
+    margin-top: -20px;
+    margin-left: 20px;
+    display: none;
+    z-index: 10;
+}
+#nav-four:hover #four-1{
+    display:block;
+}
 #top-pic{
     width: 960px;
     margin: 0 auto;
@@ -38,9 +86,74 @@
         padding-top: 56%;
         height: 0;
     }
+    #top-nav{
+        display: none;
+    }
 }
 @media screen and (max-width:480px){
     #top-pic{
         background-image: url(480.png);
     }
+}
+
+#middle{
+    width: 100%;
+    /* height: 4rem; */
+    background: #e7e7e7;
+}
+#middle #middle-one{
+    height: 1rem;
+    margin: 0 3%;
+    display: flex;
+    margin-bottom: 0.1rem;
+}
+#one-left{
+    flex:1;
+    background: #234567;
+}
+#one-right{
+    flex:3;
+    background: #000;
+}
+#middle #middle-two{
+    height: 1rem;
+    margin: 0 3%;
+    display: flex;
+    margin-bottom: 0.1rem;
+}
+#two-left{
+    flex:1;
+    background: #234567;
+}
+#two-right{
+    flex:3;
+    background: #000;
+}
+#middle #middle-three{
+    height: 1rem;
+    margin: 0 3%;
+    display: flex;
+    margin-bottom: 0.1rem;
+}
+#three-left{
+    flex:1;
+    background: #234567;
+}
+#three-right{
+    flex:3;
+    background: #000;
+}
+#middle #middle-four{
+    height: 1rem;
+    margin: 0 3%;
+    display: flex;
+    margin-bottom: 0.1rem;
+}
+#four-left{
+    flex:1;
+    background: #234567;
+}
+#four-right{
+    flex:3;
+    background: #000;
 }
