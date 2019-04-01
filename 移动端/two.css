@@ -1,37 +1,67 @@
+#top-pic{
+    height: 100%;
+}
+/* 头 */
+#head{
+    margin-left: 2%;
+}
+.jumbotron{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+}
+.jumbotron h1{
+    color:#00a862;
+}
+.navbar-default{
+    background: none;
+    border:none;
+}
+
 #top{
-    background: #eee;
+    background: #fff;
     height: 40px;
     border-bottom: 1px solid #ccc;
 }
 #top #top-menu{
     display:flex;
     width: 300px;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    margin: 0 0 0 auto;
+    margin: 0 0.3rem 0 auto;
     cursor: pointer;
     z-index: 111;
+    font-weight: bold;
+    color:#5b5d56;
 }
-#top #top-menu #top-menu-one{
-    flex:1;
-    background: #ff0000;
-}
-#top #top-menu #top-menu-two{
-    flex:1;
-}
-#top #top-menu #top-menu-three{
-    flex:1;
-}
-#top #top-menu #top-menu-one #top-menu-second-one{
-    border-top: 2px solid #00a862;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
+#top #top-menu .dropdown{
     color:#00a862;
-    display:none;
+    border:none;
+    border-radius: none;
+    height: 39px;
 }
-#top #top-menu #top-menu-one:hover #top-menu-second-one{
-    display: block;
-    
+#top #top-menu .dropdown button{
+    color:#00a862;
+    border:none;
+    border-radius: none;
+    height: 39px;
 }
+
+
+.change{
+    animation: change 1.5s ease forwards;
+}
+@keyframes change{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+
+
+
