@@ -5,13 +5,13 @@
     width: 100%;
 }
 #top-pic #top-nav{
-    width: 960px;
-    height: 80px;
+    width: 1200px;
+    height: 100px;
     background:rgba(255,255,255,0.5);
     display: flex;
     font-size: 20px;
     text-align: center;
-    line-height: 80px;
+    line-height: 100px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -34,7 +34,7 @@
     height: 200px;
     background: #018087;
     margin-top: -20px;
-    margin-left: 20px;
+    margin-left: 50px;
     display: none;
     z-index: 10;
     text-align: center;
@@ -49,7 +49,7 @@
     height: 200px;
     background: #018087;
     margin-top: -20px;
-    margin-left: 20px;
+    margin-left: 50px;
     display: none;
     z-index: 10;
     color:#fff;
@@ -63,7 +63,7 @@
     height: 200px;
     background: #018087;
     margin-top: -20px;
-    margin-left: 20px;
+    margin-left: 50px;
     display: none;
     z-index: 10;
     color:#fff;
@@ -77,7 +77,7 @@
     height: 200px;
     background: #018087;
     margin-top: -20px;
-    margin-left: 20px;
+    margin-left: 50px;
     display: none;
     z-index: 10;
     color:#fff;
@@ -100,7 +100,7 @@
 }
 #logo{
     flex:1;
-    background: #ff0000;
+    background: #ccffaa;
 }
 #text{
     flex:3;
