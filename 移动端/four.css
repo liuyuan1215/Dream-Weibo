@@ -1,0 +1,112 @@
+/* 顶部 */
+#wrapper{
+    width: 100%;
+}
+#wrapper #top{
+    height: 0.5rem;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+#top>p{
+    color:#00a862;
+    font-weight: bolder;
+    font-size: 0.3rem;
+}
+/* 顶部导航 */
+#wrapper #top-nav{
+    background: #00a862;
+    height: 80px;
+}
+#wrapper #top-nav #nav-a{
+    background: #00a862;
+    margin: 0 15px;
+    display:flex;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 20px;
+    color:#fff;
+}
+#nav-a #nav-one{
+    flex:1;
+    margin: 0 2px;
+    cursor: pointer;
+}
+#nav-a #nav-two{
+    flex:1;
+    margin: 0 2px;
+    cursor: pointer;
+}
+#nav-a #nav-three{
+    flex:1;
+    margin: 0 2px;
+    cursor: pointer;
+}
+#nav-a #nav-four{
+    flex:1;
+    margin: 0 2px;
+    cursor: pointer;
+}
+#wrapper #top-nav #nav-b{
+    display:none;
+}
+#wrapper #top-nav #nav-c{
+    width: 280px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    border-right:1px solid #fff;
+    display:none;
+}
+#list{
+    background: #00a862;
+    text-align: center;
+    color:#fff;
+    font-size: 20px;
+}
+#list .navc{
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 2px solid #fff;
+    cursor: pointer;
+}
+/* 轮播图 */
+
+
+
+
+
+
+
+@media screen and (max-width:960px){
+    #wrapper #top{
+        height: 0.6rem;
+    }
+    #wrapper #top-nav{
+        height: 70px;
+    }
+    #wrapper #top-nav #nav-a{
+        display:none;
+    }
+    #wrapper #top-nav #nav-b{
+        display:block;
+        padding-left: 15px;
+        color:#fff;
+        font-size: 16px;
+        line-height: 70px;
+    }
+}
+@media screen and (max-width:480px){
+    #wrapper #top{
+        height: 1rem;
+    }
+    #wrapper #top-nav{
+        height: 60px;
+    }
+    #wrapper #top-nav #nav-b{
+        line-height: 60px;
+    }
+}
