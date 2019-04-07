@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #ads {
+            width: 590px;
+            height: 250px;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        #ads img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            animation-timing-function: linear;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+        }
+
+        #ads img.show {
+            animation-name: show;
+        }
+
+        #ads img.unshow {
+            animation-name: disapper;
+        }
+
+        #ads ul {
+            position: absolute;
+            bottom: 10px;
+            left: 240px;
+        }
+
+        #ads ul li {
+            width: 12px;
+            height: 12px;
+            float: left;
+            background: rgba(255, 255, 255, 0.7);
+            margin-right: 8px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        #ads ul li.active {
+            background: orange;
+        }
+
+        @keyframes show {
+            from {
+                opacity:0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes disappear {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ads">
+        <img src="1.png" alt="" class="show" />
+        <img src="1.png" alt="" />
+        <img src="1.png" alt="" />
+        <img src="1.png" alt="" />
+        <img src="1.png" alt="" />
+        <img src="1.png" alt="" />
+        <ul>
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+<script>
+    window.onload = function(){
+    var ads = document.getElementById("ads");
+    var imgs = ads.getElementsByTagName("img");
+    var lits = ads.getElementsByTagName("li");
+    var timer = null;
+    var cur = 0;
+    var len = lits.length;
+
+    // 定义并调用自动播放函数
+    timer = setInterval( autoPlay,1000 );
+
+    //鼠标滑过容器停止播放
+    ads.onmouseover = function(){
+        clearInterval( timer );
+    }
+    // 鼠标离开容器时继续播放下一张
+    ads.onmouseout = function(){
+        timer = setInterval( autoPlay,1000 );
+    }
+    // 遍历所有圆点导航实现划过切换至对应的图片
+    for( var i =0; i<len; i++ ){
+        (function(j){
+            lits[j].onclick = function(){
+                changePic(j);
+                cur = j;
+            }
+        })(i);
+    }
+
+
+    function autoPlay(){
+        cur++;
+        if( cur>=len ){ cur = 0 }
+        changePic( cur );
+    }
+    // 定义图片切换函数
+    function changePic( curIndex ){
+        for( var i= 0;i<len;i++ ){
+            imgs[i].className = "unshow";
+            lits[i].className="";
+        }
+        imgs[curIndex].className = "show";
+        lits[curIndex].className = "active";
+
+    }
+
+}
+</script>
+</body>
+
+</html>
