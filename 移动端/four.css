@@ -167,11 +167,35 @@
     flex:1;
     margin: 10px 10px;
     background: #00a862;
+    display:flex;
+    cursor: pointer;
+}
+#music1{
+    flex:1;
+    background:url(shu.PNG);
+    background-size:auto 2rem; 
+}
+#music2>img{
+    width: 2rem;
+    height: 100%;
+    overflow: hidden;
 }
 #div-a #div2{
     flex:1;
     margin: 10px 10px;
     background: #00a862;
+    display:flex;
+    cursor: pointer;
+}
+#play1{
+    flex:1;
+    background:url(shu.PNG);
+    background-size:auto 2rem; 
+}
+#play2>img{
+    width: 2rem;
+    height: 100%;
+    overflow: hidden;
 }
 #div-b{
     display:flex;
@@ -181,11 +205,35 @@
     flex:1;
     margin: 10px 10px;
     background: #00a862;
+    display:flex;
+    cursor: pointer;
+}
+#talk1{
+    flex:1;
+    background:url(shu.PNG);
+    background-size:auto 2rem; 
+}
+#talk2>img{
+    width: 2rem;
+    height: 100%;
+    overflow: hidden;
 }
 #div-b #div4{
     flex:1;
     margin: 10px 10px;
     background: #00a862;
+    display:flex;
+    cursor: pointer;
+}
+#more1{
+    flex:1;
+    background:url(shu.PNG);
+    background-size:auto 2rem; 
+}
+#more2>img{
+    width: 2rem;
+    height: 100%;
+    overflow: hidden;
 }
 /* 网站简介 */
 #introduce{
@@ -195,7 +243,7 @@
 }
 #aa{
     background: #ffffff;
-    height: 2rem;
+    height: 1.3rem;
     margin: 10px 30px;
 }
 #introduce #title2{
@@ -206,23 +254,31 @@
 }
 #in-text{
     font-size: 20px; 
+    margin: 5px 40px 0 40px;
+    text-align: center;
 }
 /* 关于我们 */
 #us{
-    height: 1rem;
+    height: 0.9rem;
     margin: 10px 30px;
     border-top: 2px solid #00a862;
     border-left: 2px solid #00a862;
     border-bottom: 2px solid #00a862;
 }
 #us #us1{
+    margin: 10px auto 0 auto;
     font-size: 30px;
     font-weight: bold;
     text-align: center;
 }
+#us #us2{
+    margin: 5px 40px 0 40px;
+    font-size: 20px; 
+    text-align: center;
+}
 /* 联系我们 */
 #contact{
-    height: 1rem;
+    height: 0.8rem;
     margin: 10px 30px;
     display:flex;
 }
@@ -232,7 +288,7 @@
     color:#fff;
     font-size: 26px;
     text-align: center;
-    line-height: 1rem;
+    line-height: 0.8rem;
 }
 #contact #contact2{
     flex:3;
@@ -246,7 +302,6 @@
     padding:10px;
     border-bottom:1px solid #00a862;
 }
-
 /* 底部 */
 #bottom{
     position: relative;
@@ -292,14 +347,22 @@
     #introduce #title2{
         font-size: 26px;
     }
+    #aa{
+        height: 1.2rem;
+    }
     #in-text{
         font-size: 18px; 
+        margin: 5px 30px 0 30px;
+    }
+    #us #us2{
+        font-size: 18px; 
+        margin: 5px 30px 0 30px;
     }
     #us #us1{
         font-size: 26px;
     }
     #us{
-        height: 1.5rem;
+        height: 2rem;
     }
     #contact #contact1{
         font-size: 20px;
@@ -341,14 +404,22 @@
         font-size: 30px;
         padding-top: 10px;
     }
+    #aa{
+        height: 2.8rem;
+    }
     #in-text{
         font-size: 16px; 
+        margin: 5px 20px 0 20px;
+    }
+    #us #us2{
+        font-size: 16px; 
+        margin: 5px 20px 0 20px;
     }
     #us #us1{
         font-size: 22px;
     }
     #us{
-        height: 2rem;
+        height: 2.8rem;
     }
     #contact #contact1{
         font-size: 13px;
@@ -360,6 +431,12 @@
     #contact2>ul>li{
         padding:0px 10px;
         border-bottom:1px solid #00a862;
+    }
+    #contact{
+        height: 1.2rem;
+    }
+    #contact #contact1{
+        line-height: 1.2rem;
     }
 }
 
