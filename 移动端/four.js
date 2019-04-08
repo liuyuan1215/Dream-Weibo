@@ -50,6 +50,8 @@ var oNavc2 = document.getElementById('navc2');
 var oNavc3 = document.getElementById('navc3');
 var oNavc4 = document.getElementById('navc4');
 
+var oBack = document.getElementById('back');
+
 // PC
 oNavbs.onclick = function(){
     oNavc.style.display='block';
