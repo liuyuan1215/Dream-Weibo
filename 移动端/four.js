@@ -39,6 +39,34 @@
 //     }
 // }
 
+// 时间
+var time1 = document.getElementById('time1');
+var now = new Date(),s;
+    var day;
+    if(now.getDay()==1){
+        day='一';
+    }else if(now.getDay()==2){
+        day='二';
+    }
+    else if(now.getDay()==3){
+        day='三';
+    }
+    else if(now.getDay()==4){
+        day='四';
+    }
+    else if(now.getDay()==5){
+        day='五';
+    }
+    else if(now.getDay()==6){
+        day='六';
+    }else{
+        day='日';
+    }
+    s=now.getFullYear()+"年"+(now.getMonth()+1)+"月"+now.getDate()+"日"+"<br>"+"星期"+day+"<br>"+now.getHours()+"时"+now.getMinutes()+"分"+now.getSeconds()+"秒";
+    var oDiv = document.createElement('div');
+    oDiv.innerHTML = s;
+    time1.appendChild(oDiv);
+
 // 导航
 var oWrapper = document.getElementById('wrapper');
 var oNavbs = document.getElementById('nav-bs');
