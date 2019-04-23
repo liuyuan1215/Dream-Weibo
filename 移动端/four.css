@@ -49,6 +49,9 @@
 #wrapper #top-nav #nav-b>span{
     cursor: pointer;
 }
+#wrapper #top-nav #nav-b>img{
+    height: 70px;
+}
 /* #wrapper #top-nav  */
 #nav-c{
     width: 270px;
@@ -232,7 +235,6 @@
 }
 #aa{
     background: #ffffff;
-    height: 1.3rem;
     margin: 10px 30px;
 }
 #introduce #title2{
@@ -248,7 +250,6 @@
 }
 /* 关于我们 */
 #us{
-    height: 0.9rem;
     margin: 10px 30px;
     border-top: 2px solid #00a862;
     border-left: 2px solid #00a862;
@@ -330,9 +331,6 @@
     #introduce #title2{
         font-size: 26px;
     }
-    #aa{
-        height: 1.2rem;
-    }
     #in-text{
         font-size: 18px; 
         margin: 5px 30px 0 30px;
@@ -343,9 +341,6 @@
     }
     #us #us1{
         font-size: 26px;
-    }
-    #us{
-        height: 2rem;
     }
     #contact #contact1{
         font-size: 20px;
@@ -366,6 +361,9 @@
     #wrapper #top-nav #nav-b{
         line-height: 60px;
     }
+    #wrapper #top-nav #nav-b>img{
+        height: 60px;
+    }
     #box ul {
         position: absolute;
         bottom: 3px;
@@ -384,9 +382,6 @@
         font-size: 30px;
         padding-top: 10px;
     }
-    #aa{
-        height: 2.8rem;
-    }
     #in-text{
         font-size: 16px; 
         margin: 5px 20px 0 20px;
@@ -397,9 +392,6 @@
     }
     #us #us1{
         font-size: 22px;
-    }
-    #us{
-        height: 2.8rem;
     }
     #contact #contact1{
         font-size: 13px;

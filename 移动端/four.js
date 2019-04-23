@@ -88,7 +88,19 @@ oNavc2.onclick = function(){
     oNavc.style.display='none';
     oWrapper.style.position='absolute';
     oWrapper.style.left='0';
-    $('html,body').scrollTop(700);
+    $('html,body').scrollTop(900);
+};
+oNavc3.onclick = function(){
+    oNavc.style.display='none';
+    oWrapper.style.position='absolute';
+    oWrapper.style.left='0';
+    $('html,body').scrollTop(1300);
+};
+oNavc4.onclick = function(){
+    oNavc.style.display='none';
+    oWrapper.style.position='absolute';
+    oWrapper.style.left='0';
+    $('html,body').scrollTop(1600);
 };
 // 移动
 oNavc1.tag = function(){
@@ -100,5 +112,17 @@ oNavc2.tag = function(){
     oNavc.style.display='none';
     oWrapper.style.position='absolute';
     oWrapper.style.left='0';
-    $('html,body').scrollTop(200);
+    $('html,body').scrollTop(600);
+};
+oNavc3.tag = function(){
+    oNavc.style.display='none';
+    oWrapper.style.position='absolute';
+    oWrapper.style.left='0';
+    $('html,body').scrollTop(1000);
+};
+oNavc4.tag = function(){
+    oNavc.style.display='none';
+    oWrapper.style.position='absolute';
+    oWrapper.style.left='0';
+    $('html,body').scrollTop(1200);
 };
