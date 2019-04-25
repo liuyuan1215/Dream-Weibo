@@ -2,14 +2,9 @@
 #wrapper{
     width: 100%;
 }
-#wrapper #gap{
-    width: 100%;
-    height: 6px;
-}
 #wrapper #top-nav{
     background: #00a862;
     height: 70px;
-    box-shadow: 0 10px 0 #118957;
 }
 #wrapper #top-nav #nav-a{
     background: #00a862;
@@ -34,10 +29,8 @@
     cursor: pointer;
     border-left: 1px solid #fff;
 }
-#nav-a a{
+#nav-a{
     color:#fff;
-    text-decoration: none;
-    outline: none;
 }
 #nav-a #nav-two{
     flex:1;
@@ -63,8 +56,13 @@
 #wrapper #top-nav #nav-b{
     display:none;
 }
-#wrapper #top-nav #nav-b>span{
+#wrapper #top-nav #nav-b #nav-bs{
+    position: absolute;
+    right: 10px;
+    top: 18px;
     cursor: pointer;
+    width: 28px;
+    height: 28px;
 }
 #wrapper #top-nav #nav-b>img{
     height: 70px;
@@ -217,7 +215,7 @@
 /* 网站简介 */
 #introduce{
     margin: 10x 10px;
-    background: url(4.png);
+    background: url(1.png) no-repeat;
     background-size: 100%;
     padding: 20px 30px 20px 30px;
 }
@@ -255,6 +253,7 @@
     margin: 5px 40px 0 40px;
     font-size: 20px; 
     text-align: center;
+    padding:20px;
 }
 /* 联系我们 */
 #contact{
@@ -316,27 +315,20 @@
     position: relative;
 }
 #bottom #back{
-    background: #00a862;
-    text-align: center;
-    line-height: 0.3rem;
     position: absolute;
     right: 20px;
-    bottom: 0;
-    font-size: 20px;
-    width: 0.8rem;
-    height: 0.3rem;
-    color:#fff;
-    border-radius: 0.15rem;
+    bottom: 0px;
+    width: 0.4rem;
     cursor: pointer;
+}
+#bottom #back>img{
+    width: 100%;
 }
 
 
 @media screen and (max-width:960px){
     #wrapper #top-nav{
         height: 70px;
-    }
-    #wrapper #gap{
-        display: none;
     }
     #wrapper #top-nav #nav-a{
         display:none;
@@ -382,6 +374,9 @@
     #contact2>ul>li{
         padding:5px 10px;
         border-bottom:1px solid #00a862;
+    }
+    #bottom #back{
+        width: 0.5rem;
     }
 }
 @media screen and (max-width:480px){
@@ -432,6 +427,7 @@
     #us #us2{
         font-size: 16px; 
         margin: 5px 20px 0 20px;
+        padding: 10px;
     }
     #us #us1{
         font-size: 22px;
@@ -456,5 +452,9 @@
     #last .blod{
         font-size: 0.3rem;
         font-weight: bold;
+    }
+    #bottom #back{
+        right: 10px;
+        width: 0.7rem;
     }
 }

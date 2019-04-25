@@ -78,79 +78,93 @@ var oNavc2 = document.getElementById('navc2');
 var oNavc3 = document.getElementById('navc3');
 var oNavc4 = document.getElementById('navc4');
 
+var oNavone = document.getElementById('nav-one');
+var oNavtwo = document.getElementById('nav-two');
+var oNavthree = document.getElementById('nav-three');
+var oNavfour = document.getElementById('nav-four');
+
 var oBack = document.getElementById('back');
 
 // PC
-oNavbs.onclick = function(){
-    oNavc.style.display='block';
-    oWrapper.style.position='absolute';
-    oWrapper.style.left='270px';
+oNavbs.onclick = function () {
+    oNavc.style.display = 'block';
+    oWrapper.style.position = 'absolute';
+    oWrapper.style.left = '270px';
 };
-oRe.onclick = function(){
-    oNavc.style.display='none';
-    oWrapper.style.position='absolute';
-    oWrapper.style.left='0';
+oRe.onclick = function () {
+    oNavc.style.display = 'none';
+    oWrapper.style.position = 'absolute';
+    oWrapper.style.left = '0';
 }
-oBack.onclick = function(){
+oBack.onclick = function () {
     $('html,body').scrollTop(0);
 }
 // 移动
-oNavbs.tag = function(){
-    oNavc.style.display='block';
-    oWrapper.style.position='absolute';
-    oWrapper.style.left='270px';
+oNavbs.tag = function () {
+    oNavc.style.display = 'block';
+    oWrapper.style.position = 'absolute';
+    oWrapper.style.left = '270px';
 };
-oRe.tag = function(){
-    oNavc.style.display='none';
-    oWrapper.style.position='absolute';
-    oWrapper.style.left='0';
+oRe.tag = function () {
+    oNavc.style.display = 'none';
+    oWrapper.style.position = 'absolute';
+    oWrapper.style.left = '0';
 }
 
 // PC
-oNavc1.onclick = function(){
-    oNavc.style.display='none';
-    oWrapper.style.position='absolute';
-    oWrapper.style.left='0';
+oNavc1.onclick = function () {
+    oNavc.style.display = 'none';
+    oWrapper.style.position = 'absolute';
+    oWrapper.style.left = '0';
 };
-oNavc2.onclick = function(){
-    oNavc.style.display='none';
-    oWrapper.style.position='absolute';
-    oWrapper.style.left='0';
+oNavc2.onclick = function () {
+    oNavc.style.display = 'none';
+    oWrapper.style.position = 'absolute';
+    oWrapper.style.left = '0';
     $('html,body').scrollTop(900);
 };
-oNavc3.onclick = function(){
-    oNavc.style.display='none';
-    oWrapper.style.position='absolute';
-    oWrapper.style.left='0';
+oNavtwo.onclick = function () {
+    $('html,body').scrollTop(900);
+};
+oNavc3.onclick = function () {
+    oNavc.style.display = 'none';
+    oWrapper.style.position = 'absolute';
+    oWrapper.style.left = '0';
     $('html,body').scrollTop(1300);
 };
-oNavc4.onclick = function(){
-    oNavc.style.display='none';
-    oWrapper.style.position='absolute';
-    oWrapper.style.left='0';
+oNavthree.onclick = function () {
+    $('html,body').scrollTop(1300);
+};
+oNavc4.onclick = function () {
+    oNavc.style.display = 'none';
+    oWrapper.style.position = 'absolute';
+    oWrapper.style.left = '0';
+    $('html,body').scrollTop(1600);
+};
+oNavfour.onclick = function () {
     $('html,body').scrollTop(1600);
 };
 // 移动
-oNavc1.tag = function(){
-    oNavc.style.display='none';
-    oWrapper.style.position='absolute';
-    oWrapper.style.left='0';
+oNavc1.tag = function () {
+    oNavc.style.display = 'none';
+    oWrapper.style.position = 'absolute';
+    oWrapper.style.left = '0';
 };
-oNavc2.tag = function(){
-    oNavc.style.display='none';
-    oWrapper.style.position='absolute';
-    oWrapper.style.left='0';
+oNavc2.tag = function () {
+    oNavc.style.display = 'none';
+    oWrapper.style.position = 'absolute';
+    oWrapper.style.left = '0';
     $('html,body').scrollTop(600);
 };
-oNavc3.tag = function(){
-    oNavc.style.display='none';
-    oWrapper.style.position='absolute';
-    oWrapper.style.left='0';
+oNavc3.tag = function () {
+    oNavc.style.display = 'none';
+    oWrapper.style.position = 'absolute';
+    oWrapper.style.left = '0';
     $('html,body').scrollTop(1000);
 };
-oNavc4.tag = function(){
-    oNavc.style.display='none';
-    oWrapper.style.position='absolute';
-    oWrapper.style.left='0';
+oNavc4.tag = function () {
+    oNavc.style.display = 'none';
+    oWrapper.style.position = 'absolute';
+    oWrapper.style.left = '0';
     $('html,body').scrollTop(1200);
 };
