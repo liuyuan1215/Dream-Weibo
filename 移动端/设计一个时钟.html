@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body,
+			html {
+				background-color: #000000;
+			}
+			
+			.wrap {
+				width: 500px;
+				height: 500px;
+				border: 1px solid #BA55D3;
+				background-color: white;
+				border-radius: 30%;
+				margin: 0 auto;
+				position: relative;
+				top: 150px;
+			}
+			
+			.span1 {
+				width: 40px;
+				height: 40px;
+				/*border: 1px solid black;*/
+				line-height: 50px;
+				text-align: center;
+				display: block;
+				position: absolute;
+				left: 230px;
+				top: 230px;
+			}
+			
+			.pointHour {
+				width: 15px;
+				height: 80px;
+				background-color: #000000;
+				border-radius: 100px;
+				position: absolute;
+				left: 242.5px;
+				top: 177.5px;
+				transform: rotate(10deg);
+				transform-origin: 7.5px 72.5px;
+				z-index: 100;
+				opacity: 0.9;
+			}
+			
+			.pointSeconds {
+				width: 10px;
+				height: 200px;
+				background-color: yellow;
+				position: absolute;
+				left: 245px;
+				top: 55px;
+				transform: rotate(0deg);
+				transform-origin: 5px 195px;
+				border-radius: 100px;
+			}
+			
+			.pointMinute {
+				width: 15px;
+				height: 180px;
+				background-color: purple;
+				border-radius: 100px;
+				position: absolute;
+				left: 242.5px;
+				top: 77.5px;
+				transform: rotate(0deg);
+				transform-origin: 7.5px 172.5px;
+			}
+			
+			.box3 {
+				width: 220px;
+				height: 50px;
+				border: 1px solid red;
+				position: absolute;
+				top: 310px;
+				left: 140px;
+				font-size: 8px;
+				text-align: center;
+				line-height: 50px;
+				z-index: 10;
+			}
+			.box2 {
+				width: 3px;
+				height: 22px;
+			    background-color: gray;
+				color:white;
+				float: left;
+				z-index: 1000000;
+				margin: 2px;
+				position: absolute;
+				left: 250px;
+				top: 250px;
+				transform: rotate();
+			}
+			
+			
+		</style>
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="box">
+				<span class="span1">12</span>
+				<span class="span1">1</span>
+				<span class="span1">2</span>
+				<span class="span1">3</span>
+				<span class="span1">4</span>
+				<span class="span1">5</span>
+				<span class="span1">6</span>
+				<span class="span1">7</span>
+				<span class="span1">8</span>
+				<span class="span1">9</span>
+				<span class="span1">10</span>
+				<span class="span1">11</span>
+
+			</div>
+			<div class="pointHour"></div>
+			<div class="pointMinute"></div>
+			<div class="pointSeconds"></div>
+			<div class="box3"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			<div class="box2"></div>
+			</div>
+			
+
+		
+		<script language="JavaScript">
+			var span1 = document.getElementsByClassName("span1");
+			var wrap = document.getElementsByClassName("wrap")[0];
+			var box2 = document.getElementsByClassName("box2");
+			var box3 = document.getElementsByClassName("box3")[0];
+			for(var i = 1; i < span1.length; i++) {
+				var r = 250;
+				var y = 0;
+				var x = 0;
+				y = -(r * Math.cos(i * Math.PI / 6));
+				x = r * Math.sin(i * Math.PI / 6);
+				span1[0].style.transform = 'translateY(' + -220 + 'px )' + ' translateX(' + -0 + 'px)'
+				span1[i].style.transform = 'translateY(' + y + 'px )' + ' translateX(' + x + 'px)';
+				span1[6].style.transform = 'translateY(' + 220 + 'px )' + ' translateX(' + 0 + 'px)';
+				span1[3].style.transform = 'translateY(' + 0 + 'px )' + ' translateX(' + 220 + 'px)';
+				span1[9].style.transform = 'translateY(' + 0 + 'px )' + ' translateX(' + -220 + 'px)';
+			}
+			
+			for(var j = 0; j < box2.length; j++) {
+				var t = 250;
+				var m = 0;
+				var n = 0;
+				m = t * Math.cos(j * Math.PI / 30);
+				n = t * Math.sin(j * Math.PI / 30);
+				box2[j].style.transform = 'translateY(' + m + 'px )' + ' translateX(' + n + 'px)' ;
+//				box2[j].style.transform='rotate('+ (j*Math.PI/30)+'deg)'
+
+			}
+			
+			
+
+			var d = function(width, height) {
+				var x = 0;
+				var y = 0;
+				var top = 0;
+				var left = 0;
+				x = width / 2;
+				y = height - width / 2;
+				top = 250 - (height - width / 2);
+				left = 250 - width / 2;
+				console.log(x, y, top, left)
+			}
+			var hour = document.getElementsByClassName("pointHour")[0];
+			var minute = document.getElementsByClassName("pointMinute")[0];
+			var seconds = document.getElementsByClassName("pointSeconds")[0];
+
+			var goTime = function() {
+				var date = new Date();
+				ms = date.getMilliseconds();
+				s = date.getSeconds() + ms / 1000;
+				m = date.getMinutes() + s / 60;
+				h = date.getHours() % 12 + m / 60;
+				seconds.style.WebkitTransform = "rotate(" + s * 6 + "deg)";
+
+				minute.style.WebkitTransform = "rotate(" + m * 6 + "deg)";
+				hour.style.WebkitTransform = "rotate(" + h * 30 + "deg)";
+			}
+			setInterval(function() {
+				goTime();
+			}, 1000);
+			var colorRandom = function() {
+				var r = parseInt(Math.floor(Math.random() * 255));
+				var g = parseInt(Math.floor(Math.random() * 255));
+				var b = parseInt(Math.floor(Math.random() * 255));
+				return "rgb" + "(" + r + "," + g + "," + b + ")";
+			}
+			var myClock = function() {
+				var Day = new Date();
+				var year = Day.getFullYear();
+				var month = Day.getMonth();
+				var data = Day.getDate();
+				var day = Day.getDay();
+				var hour = Day.getHours();
+				var minu = Day.getMinutes();
+				var second = Day.getSeconds();
+				month = month + 1;
+				var str = new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六");
+				var week = str[day];
+				var time = year + "年" + month + "月" + data + "日" + " " + week + " " + hour + " ：" + minu + "：" + second;
+				box3.innerHTML = time;
+				box3.style.backgroundColor = colorRandom();
+			}
+			setInterval(function() {
+				myClock();
+			}, 1000);
+		</script>
+	</body>
+
+</html>
