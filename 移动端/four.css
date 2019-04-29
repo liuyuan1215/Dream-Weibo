@@ -183,7 +183,6 @@
 }
 #middle #div-mid{
     display:flex;
-    /* background: linear-gradient(to left,#ddefea, #35aab2); */
 }
 #div-a{
     flex:3;
@@ -299,11 +298,6 @@
     margin: 5px 40px 0 40px;
     padding: 10px;
     text-align: center;
-    /* display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
-    overflow: hidden;
-    text-overflow: ellipsis; */
 }
 /* 关于我们 */
 #us{
