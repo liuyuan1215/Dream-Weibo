@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 惰性载入 表示 函数 执行的分支 仅会发生一次 
+        // 第一种 实现方式      在第一次调用的过程中 该函数会被覆盖 为另外一个 按合适方式执行的函数      
+        // 这样 任何调用对原函数的调用 都不用在经过执行的分支了
+        function createXHR() {
+            if (typeof XMLHttpRequest != 'undefined') {
+                createXHR = function () {
+                    return new XMLHttpRequest()
+                }
+            }
+            else if (typeof ActiveXObject != 'undefined') {
+                createXHR = function () {
+                    // 这里是 ie 浏览器 创建 xmlhttp 的方式 这个函数最后返回 
+                    return new ActiveXObject(arguments.callee.activeXString)
+                }
+            }
+
+            else {
+                createXHR = function () {
+                    throw new Error("NO XHR object available")
+                }
+            }
+        }
+        // 第二种 实现方式 就是在声明函数的时候就指定适当的函数 这样 调用函数的时候 就不会损失性能 而在代码首次加载的时候 会损失一点性能 
+        var createXHR = (function () {
+            if (typeof XMLHttpRequest != 'undefined') {
+                return function () {
+                    return new XMLHttpRequest()
+                }
+            }
+            else if (typeof ActiveXObject != 'undefined') {
+                return function () {
+                    // 这里是 ie 浏览器 创建 xmlhttp 的方式 这个函数最后返回 
+                    return new ActiveXObject(arguments.callee.activeXString)
+                }
+
+            }
+            else {
+                return function () {
+                    return new Error('错误')
+                }
+            }
+
+        })()
+
+
+    </script>
+</body>
+
+</html>
