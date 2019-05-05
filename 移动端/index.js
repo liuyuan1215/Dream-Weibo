@@ -1,5 +1,5 @@
 // 轮播图
-window.onload = function(){
+window.onload = function () {
     var oBox = document.getElementById("box");
     var imgs = oBox.getElementsByTagName("img");
     var lits = oBox.getElementsByTagName("li");
@@ -7,30 +7,30 @@ window.onload = function(){
     var cur = 0;
     var len = lits.length;
 
-    timer = setInterval( autoPlay,1500 );
+    timer = setInterval(autoPlay, 1500);
 
-    oBox.onmouseover = function(){
-        clearInterval( timer );
+    oBox.onmouseover = function () {
+        clearInterval(timer);
     }
-    oBox.onmouseout = function(){
-        timer = setInterval( autoPlay,1500 );
+    oBox.onmouseout = function () {
+        timer = setInterval(autoPlay, 1500);
     }
-    for( var i =0; i<len; i++ ){
-        (function(j){
-            lits[j].onclick = function(){
+    for (var i = 0; i < len; i++) {
+        (function (j) {
+            lits[j].onclick = function () {
                 changePic(j);
                 cur = j;
             }
         })(i);
     }
 
-    function autoPlay(){
+    function autoPlay() {
         cur++;
-        if( cur>=len ){ cur = 0 }
-        changePic( cur );
+        if (cur >= len) { cur = 0 }
+        changePic(cur);
     }
-    function changePic( curIndex ){
-        for( var i= 0;i<len;i++ ){
+    function changePic(curIndex) {
+        for (var i = 0; i < len; i++) {
             imgs[i].className = "unshow";
             lits[i].className = "";
         }
@@ -147,7 +147,7 @@ var oHour = document.getElementById("hour");
 var oMinute = document.getElementById("minute");
 var oSecond = document.getElementById("second");
 var lis = "";
-for(var i=0; i<60; i++){
+for (var i = 0; i < 60; i++) {
     /*var oLi = document.createElement("li");
     oDial.appendChild(oLi);*/
     lis += "<li style='transform: rotate(" + i * 6 + "deg);'></li>";
@@ -158,19 +158,19 @@ run();
 
 setInterval(run, 1000);
 
-function run(){
+function run() {
     var now = new Date();
     var second = now.getSeconds();
     var minute = now.getMinutes() + second / 60;
-    var hour = now.getHours() ;//+ minute / 60
-    oHour.style.transform = "rotate("+ (hour * 30 + minute / 60 * 30)  +"deg)";
-    oMinute.style.transform = "rotate("+ minute * 6 +"deg)";
-    oSecond.style.transform = "rotate("+ second * 6 +"deg)";
+    var hour = now.getHours();//+ minute / 60
+    oHour.style.transform = "rotate(" + (hour * 30 + minute / 60 * 30) + "deg)";
+    oMinute.style.transform = "rotate(" + minute * 6 + "deg)";
+    oSecond.style.transform = "rotate(" + second * 6 + "deg)";
 }
 
 var box3 = document.getElementsByClassName("box3")[0];
 var oDiv = document.createElement('div');
-var myClock = function() {
+var myClock = function () {
     var Day = new Date();
     var year = Day.getFullYear();
     var month = Day.getMonth();
@@ -185,7 +185,12 @@ var myClock = function() {
     var time = year + "年" + month + "月" + data + "日" + " " + week + " " + hour + " ：" + minu + "：" + second;
     oDiv.innerHTML = time;
 }
-setInterval(function() {
+setInterval(function () {
     myClock();
 }, 1000);
 box3.appendChild(oDiv);
+
+// var oTest = document.getElementsByClassName('test')[0];
+// setTimeout(function () {
+//     oTest.style.display = 'none';
+// }, 2500)

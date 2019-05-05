@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		body,
+		html {
+			background-color: grey;
+		}
+
+		.card {
+			width: 200px;
+			height: 150px;
+			border: 1px solid plum;
+			background-color: white;
+			float: left;
+			margin: 5px;
+			position: relative;
+		}
+
+		.name {
+			text-align: center;
+			color: #000000;
+			padding-top: 30px;
+			margin: 5px;
+		}
+
+		.number {
+			padding: 30px;
+			color: #000000;
+			font-size: 15px;
+			text-align: center;
+			position: absolute;
+			top: 50px;
+			left: 50px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="active"></div>
+	<script>
+		var active = document.getElementsByClassName("active")[0];
+
+		var str = '?';
+		var tol = '<div class="card">' +
+			'<div class="name">' + '&%name%&' +
+			'</div>' +
+			'<div class="number">' + '&%number%&' +
+			'</div>' +
+			'</div>'
+		//  包装ajax 函数 说白了 就是拼接url 
+		// http://localhost:3000/song/url?id=33894312&proxy=http://121.196.226.246:84
+		//  就类似于 这种的 
+		//  你得想 怎么才能拼接成这样的  而且 你的ajax  怎么才能 发出去 请求到 
+		// 一个普通的ajax 代码  是 分为 get 或post  请求的  
+		// 一般来说 都是 get  post  一般用于表单的提交 验证 
+		// so  method  就是 get 或者 post  
+		var ajax = function (mentond, request, data, callback) {
+			// 实例化 一个  XML 对象 
+			var xhr = new XMLHttpRequest();
+			//  xhr 的open  传 三个参数 一个 你的method  一个 你的字符串 一个是否异步 
+			xhr.open(mentond, request, true);
+			//  对于传进来 method  全部变成小写的 
+			m = mentond.toLocaleUpperCase();
+			request += str;
+			// http://localhost:3000/song/url?  到此之前 就拼接成这个样子 
+			//  data 是一个对象 for in 循环就是遍历对象的 
+			// 问你一个问题 数组用什么遍历？？？
+
+			for (var key in data) {
+				request += key + '=' + data[key] + '&';
+			}
+			// 然后就会变成这样  http://localhost:3000/song/url?id=33894312&name="gouzibo"&
+			//  不难发现 最后一个地址符 不是我们要的 所以切割下去
+			var newStr = "";
+			newStr = request.slice(0, request.length - 1);
+			//  如下所示	http://localhost:3000/song/url?id=33894312&name="gouzibo"
+			//  然后 就发送出去了
+			if (m == 'GET') {
+				xhr.send();
+
+			} else {
+				xhr.send(data)
+			}
+			//  在此处接收
+			xhr.onreadystatechange = function () {
+				if (xhr.status == 200 && xhr.readyState == 4) {
+					//  在前端里 传数据一般都是用JSON 格式的字符串数据  
+					//  必须用 JSON.parse 进行解析 
+					var result = callback(JSON.parent(xhr.response));
+					var s = '';
+					//  然后渲染页面
+					result.forEach(function (item, index) {
+						s += tpl.replace('$%name%$', result[index].name)
+							.replace('$%no%$', result[index].no);
+						active.innerHTML += str;
+					})
+				}
+			}
+
+		}
+		//  此处都是 调用   我知道 你了解不了解回调函数
+		// var get = function(request, data, callback) {
+		// 	ajax('GET', request, data, callback);
+		// }
+		// var getInfo = function(term, callback) {
+		// 	get('http://www.coupleworldlove.online:3000/', {
+		// 		zu: zu
+		// 	}, callback)
+
+		// }
+		// var getCall = function(callback) {
+		// 	getInfo(13, callback);
+		// }
+		// getCall(function(e) {
+		// 	console.log(e);
+		// })
+		//  回调函数的例子  不会问我 
+		var add = function (callback) {
+			callback(1, 3)
+		}
+		var add2 = function (callback) {
+			add(function (a, b) {
+				console.log(a + b)
+				callback('辅助函数')
+			})
+		}
+		add2(function (s) {
+			console.log(s)
+		})
+		var add3 = function () {
+			console.log('哈哈')
+		}
+		var add4 = function (callback) {
+			callback()  //  callback  里面返回啥 外面接受啥 
+		}
+		add4(add3)
+	</script>
+</body>
+
+</html>
