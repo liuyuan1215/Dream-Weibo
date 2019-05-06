@@ -175,7 +175,7 @@
     /* margin: 15px; */
     padding: 15px;
     /* background: linear-gradient(to left,#ddefea, #35aab2); */
-    background: url(bg2.png);
+    background: url(bg4.png);
     background-size: 100%;
 }
 #middle #title1{
@@ -281,7 +281,7 @@
 /* 网站简介 */
 #introduce{
     margin: 10x 10px;
-    background: url(bg3.png) no-repeat;
+    /* background: url(bg3.png) no-repeat; */
     /* background: linear-gradient(to left,#ddefea, #35aab2);  */
     background-size: 100%;
     padding: 20px 30px 20px 30px;
