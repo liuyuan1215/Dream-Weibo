@@ -7,13 +7,13 @@ window.onload = function () {
     var cur = 0;
     var len = lits.length;
 
-    timer = setInterval(autoPlay, 1500);
+    timer = setInterval(autoPlay, 2000);
 
     oBox.onmouseover = function () {
         clearInterval(timer);
     }
     oBox.onmouseout = function () {
-        timer = setInterval(autoPlay, 1500);
+        timer = setInterval(autoPlay, 2000);
     }
     for (var i = 0; i < len; i++) {
         (function (j) {
