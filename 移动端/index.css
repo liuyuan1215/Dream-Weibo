@@ -280,7 +280,7 @@
 }
 #aa{
     margin: 10px 20px;
-    border: 3px solid #077c84;
+    border: 3px solid #41949a;
     position: relative;
     flex:2;
     display: flex;
@@ -294,7 +294,7 @@
     height: 0;
     border: solid;
     border-width: 20px;
-    border-color: #077c84 transparent transparent #077c84;
+    border-color: #41949a transparent transparent #41949a;
     position: absolute;
     top: 50%;
     margin-top: -10px;
@@ -313,7 +313,7 @@
     display: -webkit-flex;
 }
 #in-text{
-    background: linear-gradient(to left,#61a8b2, #fff); 
+    background: linear-gradient(to left,#41949a, #e1e7d7); 
     font-size: 20px; 
     padding: 20px;
     text-align: center;
@@ -327,7 +327,7 @@
 }
 #usw{
     margin: 10px 20px;
-    border: 3px solid #077c84;
+    border: 3px solid #41949a;
     position: relative;
     flex:2;
     display: flex;
@@ -347,7 +347,7 @@
     display: -webkit-flex;
 }
 #us #us2{
-    background: linear-gradient(to left,#fff, #61a8b2); 
+    background: linear-gradient(to left,#e1e7d7, #41949a); 
     font-size: 20px; 
     padding: 20px;
     text-align: center;
@@ -359,7 +359,7 @@
     height: 0;
     border: solid;
     border-width: 20px;
-    border-color:  transparent #077c84 #077c84 transparent;
+    border-color:  transparent #41949a #41949a transparent;
     position: absolute;
     top: 50%;
     margin-top: -10px;
@@ -383,6 +383,7 @@
     float: right;
     width: 40%;
     height: 100%;
+    background: #fbfcfc;
 }
 #contact3{
     height: 100%;
