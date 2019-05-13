@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src='./js/changePhoto.js'></script>
+    <script src="./js/music.js"></script>
+    <script src="./js/ajax.js"></script>
+    <script src="./js/falseApi.js"></script>
+    <style>
+        *{
+        margin: 0px;
+        padding: 0px;
+    }
+    body{
+        background-color: #f2f2f2;
+
+    }
+    .top{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .write{
+        width: 50%;
+        height: 50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        line-height: 30px;
+    }
+    .write-s{
+        font-size: 12px; 
+        text-align: center;
+        
+    }
+    .find-wrap{
+        position: relative;
+    }
+    .find{
+         position: absolute;
+         top: 10px;
+         left: 10px;
+    }
+    .photo{
+        width: 100%;
+        height: 220px;
+        position: relative;
+    }
+    .ul-photo-list{
+        display: inline-block;
+        list-style: none;
+        width:100%;
+        height: 220px;
+        position: relative
+    }
+    .il{
+        width:100%;
+        height: 220px; 
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+    .il:nth-child(1){
+        z-index: 10;
+    }
+    .il:nth-child(2){
+      z-index: 10;
+    }
+    .il:nth-child(3){
+        z-index: 10;
+    }
+    .il:nth-child(4){
+        z-index: 10;
+    }
+    .il:nth-child(5){
+        z-index: 10;
+    }
+    .il.active{
+        z-index: 100;
+    }
+    img{
+        display: inline-block;
+        width: 100%;
+        height: 220px;
+    }
+    .icon{
+        width: 100%;
+        height: 60px;
+        margin-top: 7px;
+        background-color: gainsboro;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .icon-i{
+         width: 60px;
+         height: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .icon-w{
+        width: 100%;
+        height: 120px;
+        margin-top: 20px; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+    }
+    .icon-w-1{
+        width: 100px;
+        height: 100px;
+        border: 1px solid #f2f2f2;
+        position: relative;
+    }
+    .sky-img{
+        width: 100px;
+        height: 100px;
+    }
+    .icon-w-p{
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    position: absolute;
+    bottom: 0px;
+    left: 10px; 
+    text-align: center;
+    color: white;
+    }
+    .icon-w-circle{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+        top: 10px;
+        left: 30px;
+        background-color: aliceblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .icon-w-2{
+        width: 220px;
+        height: 45px;
+        box-sizing: border-box;
+        border:1px solid gainsboro;
+        margin-bottom: 5px;  
+
+    }
+    .icon-w-2-wrap{
+        width: 220px;
+        height: 100px;
+        box-sizing: border-box; 
+    }
+    #img{
+        width: 45px;
+        height: 45px;
+        background-color: aqua;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+    #icon-flex{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        
+    }
+    .icon-w-top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+    .icon-w-down{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+    .icon-a{
+        width: 100%;
+        height: 340px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .icon-a-top{
+        width: 100%;
+        height: 120px;
+        margin-top: 15px;
+        box-sizing: border-box;
+        display: flex;
+        position: relative;
+        color: purple;
+    }
+    .icon-a-top-three{
+      width: 33%;
+       height: 120px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+      align-items: flex-end;
+        margin-right: 0.5px;
+        position: relative;
+    }
+    .icon-a-top-p{
+        position: absolute;
+        bottom: 0px;
+        text-align: center;
+        z-index: 100000;
+    }
+    .icon-a-down{
+        width: 100%;
+        height: 120px;
+        margin-top: 15px;
+        box-sizing: border-box;
+        display: flex;
+        position: relative;
+    }
+    .icon-a-down-three{
+      width: 33%;
+      height: 120px;
+      box-sizing: border-box;
+      margin-right: 0.5px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+    .ul-point-list{
+        list-style: none;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;;
+        z-index: 100000;
+    }
+    .point{
+        width: 10px;
+        height: 8px;
+        border-radius: 50%;
+        margin-right:14px ; 
+        float: left;
+        border: 1px solid rgba(255,255,255,0.6);
+		cursor: pointer;
+    }
+    .point.active {
+	background-color: rgba(255,255,255,0.8);
+	}
+    .search-songs{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        display: none;
+    }
+    .my-class-img{
+        width: 100%;
+       height: 120px;
+       z-index: 100
+    }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="top">
+            <button type="button" class="btn btn-default" aria-label="Left Align">
+                <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+            </button>
+            <div class="write">
+               <a href="http://www.coupleworldlove.online:3001/getMyMusic"> <p class="write-s">我的</p></a>
+                <p class="write-s">音乐馆</p>
+                <p class="write-s">发现</p>
+            </div>
+            <button type="button" class="btn btn-default" aria-label="Left Align">
+                <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+            </button>
+        </div>
+        <div class="find-wrap">
+            <div class="form-group">
+                <div class="glyphicon glyphicon-search find"></div>
+                <a href="http://www.coupleworldlove.online:3001/music">
+                    <input type="search" class="form-control" placeholder="        find" id="input-Songs">
+                </a>
+            </div>
+
+        </div>
+        <div class="photo">
+            <ul class="ul-photo-list">
+                <li class=" il ">
+                    <img src="" alt="" class="class-img">
+                </li>
+                <li class=" il ">
+                    <img src="" alt="" class="class-img">
+                </li>
+                <li class=" il ">
+                    <img src="" alt="" class="class-img">
+                </li>
+                <li class=" il ">
+                    <img src="" alt="" class="class-img">
+                </li>
+                <li class=" il ">
+                    <img src="" alt="" class="class-img">
+                </li>
+            </ul>
+            <ul class="ul-point-list">
+                <li class="point" data-index='0'></li>
+                <li class="point" data-index='1'></li>
+                <li class="point active" data-index='2'></li>
+                <li class="point" data-index='3'></li>
+                <li class="point" data-index='4'></li>
+            </ul>
+        </div>
+        <div class="icon">
+            <div class="icon-i">
+                <span class="glyphicon glyphicon-user"></span>
+                <p class="icon-s">歌手</p>
+            </div>
+            <div class="icon-i">
+                <span class="glyphicon glyphicon-signal"></span>
+                <p class="icon-s">排行</p>
+            </div>
+            <div class="icon-i">
+                <span class="glyphicon glyphicon-th-large"></span>
+                <p class="icon-s">分类歌单</p>
+            </div>
+            <div class="icon-i">
+                <span class="glyphicon glyphicon-cd"></span>
+                <p class="icon-s">电台</p>
+            </div>
+            <div class="icon-i">
+                <span class="glyphicon glyphicon-facetime-video"></span>
+                <p class="icon-s">视频</p>
+            </div>
+        </div>
+        <div class="icon-w">
+
+            <div class="icon-w-1">
+                <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4115031873,3272094041&fm=27&gp=0.jpg" alt="" class="sky-img">
+                <div class="icon-w-circle">
+                    <span class="icon-w-span glyphicon glyphicon-play"></span>
+                </div>
+                <div class="icon-w-p">个性电台</div>
+               
+
+            </div>
+            <div class="icon-w-2-wrap">
+                <div class="icon-w-2">
+                    <div class="icon-w-top">
+                        <div class="icon-w-top-write" id="icon-flex">
+                            <span class="icon-w-write-span">每日更新你想听的歌曲</span>
+                            <p class="icon-w-top-write-p" style="color: orange">邂逅</p>
+                        </div>
+                        <img class="icon-w-dwon-write-img" id="img" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3376954692,842133937&fm=27&gp=0.jpg">
+                    </div>
+                </div>
+                <div class="icon-w-2">
+                    <div class="icon-w-down">
+                        <div class="icon-w-down-write" id="icon-flex">
+                            <span class="icon-w-write-span">更新与你风格相似的歌曲</span>
+                            <p class="icon-w-down-write-p" style="color:orange">听佛说</p>
+                        </div>
+                        <img class="icon-w-dwon-write-img" id="img" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=374320731,4167461603&fm=27&gp=0.jpg">
+                            
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="icon-a">
+            <div class="icon-top-songs">为你推荐歌单</div>
+            <div class="icon-a-top">
+                <div class="icon-a-top-three">
+                        <img src="" alt="" class="my-class-img">
+                    <p class="icon-a-top-p"></p>
+                </div>
+                <div class="icon-a-top-three">
+                        <img src="" alt="" class="my-class-img">
+                    <p class="icon-a-top-p"></p>
+                </div>
+                <div class="icon-a-top-three">
+                        <img src="" alt="" class="my-class-img">
+                    <p class="icon-a-top-p"></p>
+                </div>
+            </div>
+            <div class="icon-a-down">
+                <div class="icon-a-down-three">
+                        <img src="" alt="" class="my-class-img">
+                    <p class="icon-a-top-p" style="align-self:flex-end">4</p>
+                </div>
+                <div class="icon-a-down-three">
+                        <img src="" alt="" class="my-class-img">
+                    <p class="icon-a-top-p"></p>
+                </div>
+                <div class="icon-a-down-three">
+                        <img src="" alt="" class="my-class-img">
+                    <p class="icon-a-top-p"></p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    </div>
+    <script>
+        var IMG = document.getElementsByClassName('class-img')
+        var pHtml = document.getElementsByClassName('icon-a-top-p')
+        var classIMG = document.getElementsByClassName('my-class-img')
+        handleClick()
+        var inputSongs = document.getElementById('input-Songs')
+        var find = document.getElementsByClassName('find')[0]
+        inputSongs.addEventListener('click', function () {
+            initiateRequest((e) => {
+                console.log(e)
+            })
+        })
+        getPlayList(10, 'new', function (e) {
+            var result = JSON.parse(e)
+            for (var i = 0; i < IMG.length; i++) {
+                IMG[i].src = result.playlists[i].coverImgUrl
+            }
+
+        }) 
+        getBackGroundImg(24381616, function (e) {
+            var result = JSON.parse(e)
+            var picUrlArr = result.playlist.tracks
+            falseApi.addImgMessage(picUrlArr)
+            falseApi.getImg(function(e){
+                     e.forEach((v,k)=>{
+                       classIMG[k].src =e[k].imgSrc
+                       pHtml[k].innerHTML = e[k].content
+                     })
+                })
+        })
+    </script>
+</body>
+
+</html>
