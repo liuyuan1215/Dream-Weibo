@@ -313,7 +313,7 @@
     display: -webkit-flex;
 }
 #in-text{
-    background: linear-gradient(to left,#41949a, #e1e7d7); 
+    background: linear-gradient(to left,#41949a, #f2f2f2); 
     font-size: 20px; 
     padding: 20px;
     text-align: center;
@@ -347,7 +347,7 @@
     display: -webkit-flex;
 }
 #us #us2{
-    background: linear-gradient(to left,#e1e7d7, #41949a); 
+    background: linear-gradient(to left,#f2f2f2, #41949a); 
     font-size: 20px; 
     padding: 20px;
     text-align: center;
