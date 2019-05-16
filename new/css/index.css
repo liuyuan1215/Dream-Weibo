@@ -1,6 +1,6 @@
 /* 顶部导航 */
 #wrapper{
-    width: 100%;
+    position: relative;
 }
 #wrapper #top-nav{
     background: #61a8b2;
@@ -422,17 +422,17 @@
     flex:3;
 }
 /* 回到顶部 */
-#bottom{
+/* #bottom{
     position: relative;
-}
-#bottom #back{
+} */
+#back{
     position: absolute;
     right: 20px;
     bottom: 0px;
     width: 0.4rem;
     cursor: pointer;
 }
-#bottom #back>img{
+#back>img{
     width: 100%;
 }
 

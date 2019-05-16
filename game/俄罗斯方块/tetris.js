@@ -126,6 +126,11 @@ var createCanvas = function(rows , cols , cellWidth, cellHeight)
 	// 绘制线条
 	tetris_ctx.stroke();
 }
+
+// var Ocontent = document.getElementById('content');
+// var Ocanvas = document.createElement("canvas");
+// Ocontent.appendChild(Ocanvas);
+
 // 绘制俄罗斯方块的状态
 var drawBlock = function()
 {

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="author" content="Yeeku.H.Lee(CrazyIt.org)" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title> 疯狂俄罗斯方块 </title>
+	<script type="text/javascript" src="tetris.js">
+	</script>
+	<style type="text/css">
+		body{
+			position: relative;
+		}
+		#content{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+		}
+		h2{
+			text-align: center;
+			color:#204060;
+		}
+		#div1{
+			width: 336px;
+			border: 1px solid #000;
+			background: #204060;
+			color:#fff;
+			font-size: 13pt;
+			padding-bottom: 8px;
+		}
+		#div2{
+			float:left;
+		}
+		#div3{
+			float:right;
+		}
+		span {
+			font-size: 20pt;
+			color: #fff;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="content">
+		<h2>疯狂俄罗斯方块</h2>
+		<div id='div1'>&nbsp;
+			<div id='div2'>
+				速度:<span id="curSpeedEle"></span>
+				当前积分:<span id="curScoreEle"></span>
+			</div>
+			<div id='div3'>
+				最高积分:<span id="maxScoreEle"></span>
+			</div>
+			
+		</div>
+	</div>
+
+</body>
+
+</html>
