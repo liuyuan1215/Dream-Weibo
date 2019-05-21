@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>延迟加载</title>
+<script src="jquery-1.11.0.min.js"></script>
+<script src="jquery.scrollLoading.js"></script>
+<script>
+$(function() {
+	$(".scrollLoading").scrollLoading();		
+});
+</script>
+</head>
+<body>
+<img src="img_2.jpg">
+<img src="img_2.jpg">
+<div class="scrollLoading" data-url="loaded.html">加载中...</div>
+<img class="scrollLoading" data-url="img_1.jpg" src="wait.gif">
+<div class="scrollLoading" data-url="loaded.html">加载中...</div>
+</body>
+</html>
