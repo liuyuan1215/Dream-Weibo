@@ -1,0 +1,100 @@
+<html></html>
+<head>
+    <meta  charset="utf-8"    />
+<title> 小米选项卡</title>
+<style>
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background-color: gainsboro;
+}
+ul {
+    width: 100%;
+    height: 400px;
+    list-style: none;
+    margin:  100px auto  ;
+} 
+li {
+    width: 20%;
+    height : 400px;
+    background-color: white;
+    margin-left :  4% ;
+    float: left; 
+     overflow: hidden; 
+    box-shadow: 0px 10px 10px rgba(0,0 ,0, 0.2) ;
+    transition: all .4s linear ;
+    cursor: pointer;
+
+}
+ li:hover .display {
+    transform: translateY(-55px) ;
+    transition: .5s linear
+}
+li:hover  {
+    transform: translate( 0px ,-5px) ;
+    box-shadow: 0px 15px 10px rgba(0,0 ,0, 0.7) ;
+    transition: .3s linear
+}
+  div.top {
+      width: 100px ;
+     height : 20px ;
+     line-height: 20px;
+     background-color: red ;
+     text-align: center ;
+     margin: 0px auto ;
+     
+  }
+  .img {
+      width : 100% ;
+      height:  200px;
+      margin-top: 30px ;
+
+  }
+  div.bottom {
+    width: 100% ;
+    height : 150px ;
+  }
+  .p {
+      width : 100% ;
+      height : 20px;
+      text-align: center ;
+      margin-top : 20px ;
+  }
+  .display {
+      width: 100% ;
+      height : 55px ;
+      background-color: orange ;
+      text-align: center ;
+      color: pink ;
+      box-sizing: border-box ;
+      margin-top: 70px ;
+      transition: .3s linear ;
+  }
+</style>
+</head>
+<body>
+    <ul>
+        <li>
+            <div class ='top'>
+                享9.5折
+            </div>
+            <img src="https://i8.mifile.cn/b2c-mimall-media/0c011f201a8132acd12743b49240410b.jpg" alt="" class="img">
+            <div class="bottom">
+                <p class = " p">
+                        15.6" i5 8G GTX
+
+                </p>
+                <p style=" width : 100% ;height : 20px; text-align: center ; margin-top : 20px ; color: pink ;" >更强悍的专业笔记本 </p> 
+                <div class =" display"> 
+                <strong>6299  </strong>   
+                </div>
+            </div>
+        </li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>
