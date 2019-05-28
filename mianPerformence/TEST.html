@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery-1.11.0.min.js"></script>
+    <style>
+      #wrap.active{
+          display: none;
+      }
+      #wrap.active #list{
+          display: none;
+      }
+      a{
+          display: none;
+      }
+    </style>
+</head>
+<body>
+    <div class="active"  id="wrap"> aaaa 
+        <div id="list">bbbbb</div>
+    </div>
+    <button class="btn">点击
+        <a href="">dasd</a>
+    </button>
+    <script>
+    $(function(){
+        $('.btn').on('click',function(event){
+            $(event.target).find('a').text("jjj")
+            console.log($(event.target).find("a").is(":visible"))
+            if($('#wrap').hasClass('active')){
+                $('#wrap').removeClass('active')
+            }
+            else {
+                $('#wrap').addClass('active')  
+            }
+            
+        })
+     
+    })
+    
+    
+    </script>
+</body>
+</html>
