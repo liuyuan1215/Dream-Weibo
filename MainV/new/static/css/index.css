@@ -167,71 +167,22 @@
     background: #61a8b2;
 }
 
-
-/* 作品 */
-#middle{
-    padding: 25px;
-}
 /* 钟表 */
-/* #clock{
-    width: 200px;
-    height: 200px;
-    border: 3px solid;
-    border-radius: 50%;
-    margin: 100px auto auto auto;
-    position: relative;
-}
-#dial li{
-    width: 2px;
-    height: 6px;
-    background: #000000;
-    position: absolute;
-    left: 98px;
-    top: 0;
-    transform-origin: 0 98px;
-}
-#dial li:nth-child(5n + 1){
-    height: 10px;
-}
-#hour{
-    width: 4px;
-    height: 40px;
-    background: #000000;
-    position: absolute;
-    left: 96px;
-    top: 60px;
-}
-#minute{
-    width: 4px;
-    height: 60px;
-    background: #999;
-    position: absolute;
-    left: 96px;
-    top: 40px;
-}
-#second{
-    width: 2px;
-    height: 70px;
-    background: #077c84;
-    position: absolute;
-    left: 96px;
-    top: 30px;
-}
-#clock div{
-    transform-origin: bottom;
-}
 .box3 {
     width: 200px;
     height: 50px;
-    margin-left: 75px;
-    margin-top: 25px;
+    margin: 15px auto 0 auto;
     border: 2px solid #077c84;
     font-size: 11px;
     text-align: center;
     line-height: 50px;
     z-index: 10;
     color:#077c84;
-} */
+}
+/* 作品 */
+#middle{
+    padding: 25px;
+}
 .content {
     font-size: 16px;
     text-align: center;
@@ -287,7 +238,6 @@
     transform: translateY(-30px);
     transition: .5s linear
 }
-
 
 /* 网站简介 */
 #introduce{
@@ -502,7 +452,6 @@
         display:block;
         padding-left: 15px;
     }
-
     #bottom #back{
         width: 0.5rem;
     }
