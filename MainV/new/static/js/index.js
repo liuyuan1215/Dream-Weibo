@@ -93,28 +93,28 @@ oNavc2.onclick = function () {
     oNavc.style.display = 'none';
     oWrapper.style.position = 'absolute';
     oWrapper.style.left = '0';
-    $('html,body').scrollTop(900);
+    $('html,body').scrollTop(200);
 };
 oNavtwo.onclick = function () {
-    $('html,body').scrollTop(900);
+    $('html,body').scrollTop(600);
 };
 oNavc3.onclick = function () {
     oNavc.style.display = 'none';
     oWrapper.style.position = 'absolute';
     oWrapper.style.left = '0';
-    $('html,body').scrollTop(1300);
+    $('html,body').scrollTop(400);
 };
 oNavthree.onclick = function () {
-    $('html,body').scrollTop(1300);
+    $('html,body').scrollTop(700);
 };
 oNavc4.onclick = function () {
     oNavc.style.display = 'none';
     oWrapper.style.position = 'absolute';
     oWrapper.style.left = '0';
-    $('html,body').scrollTop(1600);
+    $('html,body').scrollTop(1300);
 };
 oNavfour.onclick = function () {
-    $('html,body').scrollTop(1600);
+    $('html,body').scrollTop(1300);
 };
 // 移动
 oNavc1.tag = function () {
@@ -126,19 +126,19 @@ oNavc2.tag = function () {
     oNavc.style.display = 'none';
     oWrapper.style.position = 'absolute';
     oWrapper.style.left = '0';
-    $('html,body').scrollTop(600);
+    $('html,body').scrollTop(0);
 };
 oNavc3.tag = function () {
     oNavc.style.display = 'none';
     oWrapper.style.position = 'absolute';
     oWrapper.style.left = '0';
-    $('html,body').scrollTop(1000);
+    $('html,body').scrollTop(300);
 };
 oNavc4.tag = function () {
     oNavc.style.display = 'none';
     oWrapper.style.position = 'absolute';
     oWrapper.style.left = '0';
-    $('html,body').scrollTop(1200);
+    $('html,body').scrollTop(700);
 };
 
 // 钟表
