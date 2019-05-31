@@ -175,6 +175,7 @@
     position: relative;
 }
 .box3 {
+    width: 100%;
     position: absolute;
     left: 0.2rem;
     height: 0.2rem;
@@ -379,6 +380,7 @@
         height: 0.3rem;
         font-size: 12px;
         line-height: 0.3rem;
+        text-align: center;
     }
 }
 @media (max-width:511px){
