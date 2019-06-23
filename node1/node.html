@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="X-UA-Compatible" content="IE=8,chrome=1" /><link id="PageStyle" href="../JHSoft.UI.Lib/skin/blue/skin.css" type="text/css" rel="stylesheet">
+<script id="jhcommonjs" language="javascript" src="../js/Common.js"></script>
+
+    <title>
+        上班签到</title>
+    <script type="text/javascript" language="javascript">       
+        
+        function tbNone() {
+            document.getElementById("tbOnInfo").style.display = "none";
+            document.getElementById("tbOnBtn").style.display = "none";
+        }
+        function WinClose() {
+            //2016-03-08 qianlong 添加try-catch
+            try{
+                var topUrl = top.location;
+                var tabid = top.win_TabMenu.CurTab.tabid;
+                if (top.Dialog.Args.length > 0 && top.Dialog.zindex>0) {
+                    top.Dialog.Close(); 
+                }
+                if (tabid != undefined) {
+                 top.CloseTabWin(tabid);
+                }
+                else if (/Index\.aspx/i.test(topUrl)) {
+                    location.href = "../JHSoft.Web.WorkFlat/Index.aspx";
+                }
+                else {
+                    top.window.close();
+                }
+            }
+            catch(e)
+            {
+                top.window.close();
+            }
+        }
+    </script>
+    <script language=javascript type="text/javascript">
+        //微信链接过来的提示框
+        function showAlert(content, time, classGuid) {
+            jQuery("#alterDiv").show()
+                .text(content);
+            if (time > 0) {
+                jQuery("#alterDiv").delay(time).fadeOut("slow");
+            }
+            //签退按钮只读
+            $("#btnOK").attr("readonly", "readonly");
+            //定时刷新
+            setTimeout(wclose(classGuid), time);
+        }
+        function wclose(classGuid) {
+            window.location.href = window.location.href + "?classid=" + classGuid;
+        }
+        
+        //2015 qianlong 校验迟到原因
+        function Check() {
+            var strStar = document.getElementById("hidStar").value;
+            var strReason = document.getElementById("txt_LateResult").value;
+            if (strStar == "1" && strReason == "") {
+                alert("请填写原因");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <style type="text/css">
+        #frmOn{
+            width: 300px;
+            margin: 20px auto;
+            background-color: #f7f7f8;
+            border-radius: 5px;
+            }
+       #tbOnBtn{
+           width:100%
+           }
+    </style>
+    <form method="post" action="./attendance_on.aspx" id="frmOn">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNzkxMjIwNDE5D2QWAmYPZBYQAgEPEA8WBh4NRGF0YVRleHRGaWVsZAUKY2xhc3NfbmFtZR4ORGF0YVZhbHVlRmllbGQFCmNsYXNzX0d1aWQeC18hRGF0YUJvdW5kZ2QQFQEJ5bel5L2c5pelFQEdMTExMTEtMTExMTEtMTExMTEtMTExMTEtMTExMTEUKwMBZxYBZmQCAg8PFgIeBFRleHQFDOW3peS9nOaXpe+8mmRkAgMPDxYCHwMFDTA4OjMwIC0gMTc6MzBkZAIEDw8WAh8DBQUyMToxNGRkAgUPFgIeB1Zpc2libGVoZAIGD2QWBGYPZBYCAgEPDxYCHwMFD+aCqOW3suetvuWIsO+8mmRkAgEPZBYCAgEPDxYCHwMFIygg5pe26Ze077yaMDg6MTEgIOeKtuaAge+8muato+W4uCApZGQCCA8PFgQfAwUG562+5YiwHgdFbmFibGVkaGRkAgkPFgIeBXZhbHVlBQblhbPpl61kZPdH7eNUwA8kvf5ia95rBDFPzl8NWs5QjPtoCfG6JFEl" />
+</div>
+
+<script type="text/javascript">
+
+var theForm = document.forms['frmOn'];
+if (!theForm) {
+    theForm = document.frmOn;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+
+</script>
+
+
+    
+    <table id="tbOnInfo" class="widget-formtable" style="width: 100%">
+        <tr style="font-family: 宋体; font-size: 12px">
+            <td style="white-space: nowrap; font-family: 宋体; width: 70; font-size: 12px" align="right">
+                签到班次：
+            </td>
+            <td>
+                <select name="DDLClass" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;DDLClass\&#39;,\&#39;\&#39;)&#39;, 0)" language="javascript" id="DDLClass" style="width: 160px">
+	<option selected="selected" value="11111-11111-11111-11111-11111">工作日</option>
+
+</select>
+            </td>
+        </tr>
+        <tr style="font-family: 宋体; font-size: 12px">
+            <td style="white-space: nowrap; font-family: 宋体; font-size: 12px" colspan="2">
+                <fieldset>
+                    <legend style="text-align: left">
+                        签到信息：</legend>
+                    <div style="height: 100px" align="left">
+                        <table>
+                            <tr>
+                                <td width="80" align="right" style="white-space: nowrap; font-family: 宋体; font-size: 12px">
+                                    <span id="lblClassName">工作日：</span>
+                                </td>
+                                <td style="font-family: 宋体; font-size: 12px">
+                                    <span id="lblClassTime">08:30 - 17:30</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="80" align="right" style="font-family: 宋体; font-size: 12px">
+                                    当前时间：
+                                </td>
+                                <td style="font-family: 宋体; font-size: 12px">
+                                    <span id="lblCurTime">21:14</span>
+                                </td>
+                            </tr>
+                            
+                            <tr id="trRemark">
+	<td width="80" align="right" style="white-space: nowrap; font-family: 宋体; font-size: 12px">
+                                    <span id="lblRemark">您已签到：</span>
+                                </td>
+	<td style="white-space: nowrap; font-family: 宋体; font-size: 12px">
+                                    <span id="lblTime">( 时间：08:11  状态：正常 )</span>
+                                </td>
+</tr>
+
+                            <tr id="trPrompt">
+	<td width="80" align="right" style="white-space: nowrap; font-family: 宋体; font-size: 12px" colspan="2">
+                                    <span id="lblPrompt"></span>
+                                </td>
+</tr>
+
+                        </table>
+                    </div>
+                </fieldset>
+            </td>
+        </tr>
+    </table>
+    <table id="tbOnBtn" class="widget-formtable" align="right">
+        <tr>
+            <td align="right" style="font-family: 宋体,Arial, Helvetica, sans-serif; font-size: 12px">
+                <input type="submit" name="btnOK" value="签到" id="btnOK" disabled="disabled" class="aspNetDisabled" class="c6ui-button" data-type="active" />
+            </td>
+            <td width="100px" align="center" style="font-family: 宋体,Arial, Helvetica, sans-serif;
+                font-size: 12px">
+                <input name="btnClose" type="button" id="btnClose" value="关闭" onclick="WinClose()" class="c6ui-button" data-type="active" />
+            </td>
+        </tr>
+    </table>
+    <div style="display: none; background: #ffc; border: 1px solid #F90; height: 30px;
+        line-height: 30px; width: 300px; text-align: center; margin: 10px 0; top: 40%;
+        right: 50%; position: absolute; z-index: 9999;" id="alterDiv">
+    </div>
+    <input type="hidden" name="hidLawGuid" id="hidLawGuid" value="dbLSV-WXPdN-XBaEZ-1Y5ON-XW78b" />
+    <input type="hidden" name="hidClassGuid" id="hidClassGuid" value="11111-11111-11111-11111-11111" />
+    <input type="hidden" name="hidClassName" id="hidClassName" value="工作日" />
+    <input type="hidden" name="hidClassOnTime" id="hidClassOnTime" value="1900-01-01 08:30:00" />
+    <input type="hidden" name="hidClsssOffTime" id="hidClsssOffTime" value="1900-01-01 17:30:00" />
+    <input type="hidden" name="hidClassStretchTime" id="hidClassStretchTime" value="30" />
+    <input type="hidden" name="hidPutBeginTime" id="hidPutBeginTime" value="2017-10-16 00:00:00" />
+    <input type="hidden" name="hidAdjValue" id="hidAdjValue" />
+    <input type="hidden" name="hidAdjType" id="hidAdjType" value="Normal" />
+    <input type="hidden" name="hidIsLate" id="hidIsLate" value="0" />
+    <input type="hidden" name="hidIsOnLeave" id="hidIsOnLeave" value="0" />
+    <input type="hidden" name="hidIsOnNeglectWork" id="hidIsOnNeglectWork" value="0" />
+    <input type="hidden" name="hidConvertLeaveTime" id="hidConvertLeaveTime" value="0" />
+    <input type="hidden" name="hidIsExistsAcrossNoOn" id="hidIsExistsAcrossNoOn" value="0" />
+    <input type="hidden" name="hidStar" id="hidStar" value="1" />
+    
+<div class="aspNetHidden">
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="6538C2ED" />
+</div>
+</form>
+</body>
+</html>
