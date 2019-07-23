@@ -1,12 +1,4 @@
 
-/*!
- * jquery.scrollLoading.js
- * by zhangxinxu  http://www.zhangxinxu.com
- * 2010-11-19 v1.0
- * 2012-01-13 v1.1 鍋忕Щ鍊艰绠椾慨鏀� position 鈫� offset
- * 2012-09-25 v1.2 澧炲姞婊氬姩瀹瑰櫒鍙傛暟, 鍥炶皟鍙傛暟
- * 2015-11-17 v1.3 鍙鏄剧ず鍏冪礌杩涜澶勭悊
-*/
 (function($) {
 	$.fn.scrollLoading = function(options) {
 		var defaults = {
@@ -18,7 +10,6 @@
 		params.cache = [];
 		$(this).each(function() {
 			var node = this.nodeName.toLowerCase(), url = $(this).attr(params["attr"]);
-			//閲嶇粍
 			var data = {
 				obj: $(this),
 				tag: node,
@@ -32,7 +23,6 @@
 				params.callback.call(call.get(0));
 			}
 		};
-		//鍔ㄦ€佹樉绀烘暟鎹�
 		var loading = function() {
 			
 			var contHeight = params.container.height();
